@@ -270,54 +270,6 @@ export const content: Record<Lang, Content> = {
           },
         ],
       },
-      {
-        slug: 'sulu-dashboard',
-        tag: 'Concept · Dashboard',
-        title: 'Sulu — salon management dashboard',
-        subtitle: 'A concept web app that lets a beauty salon owner see sales, master workload and returning clients in seconds. Russian and Kazakh interface.',
-        blocks: [
-          {
-            h: 'Overview',
-            p: [
-              'Sulu is a concept dashboard for beauty salon administrators and owners in Kazakhstan. I designed three screens — daily sales, masters’ workload and returning clients — for desktop and mobile, with a Russian/Kazakh language switch and prices in tenge (₸).',
-            ],
-            note: 'This is a concept project: all numbers, client and master names are demo data.',
-          },
-          {
-            h: 'The challenge',
-            p: ['A salon administrator checks the numbers between clients, often on a phone. The product has to answer three questions fast:'],
-            list: [
-              'What brings money today?',
-              'Who is overloaded, who has free slots, and where can bookings be redistributed?',
-              'Which clients come back, and who should be reminded to book?',
-            ],
-            note: 'An extra constraint: the interface is fully bilingual, so the typeface has to cover Cyrillic and Kazakh letters (ә, ғ, қ, ң, ө, ұ, ү, һ, і).',
-          },
-          {
-            h: 'My approach',
-            p: [
-              'One question per screen. Each screen opens with the few figures that answer it, followed by the detail needed to act: a chart, a ranked list or a schedule. The same header on every screen carries navigation, period, search, language and the main action — a new booking.',
-            ],
-          },
-          {
-            h: 'Key solutions',
-            list: [
-              'Sales today — four key figures with a comparison to yesterday, revenue by hour with the peak highlighted, top services and the latest payments with statuses.',
-              'Masters’ workload — average load, free slots and masters on shift; a load bar per master; today’s schedule with free slots marked; a prompt to offer tomorrow’s free slots to regular clients.',
-              'Returning clients — the share of clients who return and a list of clients who have not visited for a while.',
-              'Two languages — a switch in the header applies to every screen; all text exists in Russian and Kazakh.',
-              'Mobile first for the daily check — navigation moves to a bottom tab bar, the period becomes a row of chips, KPI cards stack in one column and the hourly chart shows the working core of the day.',
-              'A system, not just screens — colours, type, spacing and radii live in variables, and every screen is assembled from components in Figma.',
-            ],
-          },
-          {
-            h: 'Result',
-            p: [
-              'Three desktop and three mobile screens in two languages, built on one component library and one set of tokens. As a concept, the design has not been tested with real salon owners yet — that is the natural next step.',
-            ],
-          },
-        ],
-      },
     ],
     contacts: {
       title: 'Contacts',
@@ -559,54 +511,6 @@ export const content: Record<Lang, Content> = {
               '3D-карта тела — интерактивная 3D-модель для точного выбора зоны боли.',
               'Персональное расписание и аналитика — дашборд с метриками за день/неделю/месяц: шаги, дистанция, калории, завершённые сессии, прогресс в управлении болью.',
               'Контент и профиль — блог, лента новостей, инструкция по настройке устройства и единый профиль.',
-            ],
-          },
-        ],
-      },
-      {
-        slug: 'sulu-dashboard',
-        tag: 'Концепт · Дашборд',
-        title: 'Sulu — дашборд управления салоном',
-        subtitle: 'Концепт веб-приложения, в котором владелец салона красоты за секунды видит продажи, загрузку мастеров и возвращающихся клиентов. Интерфейс на русском и казахском.',
-        blocks: [
-          {
-            h: 'Обзор',
-            p: [
-              'Sulu — концепт дашборда для администраторов и владельцев салонов красоты в Казахстане. Я спроектировала три экрана — продажи за день, загрузка мастеров и повторные клиенты — для десктопа и мобильных, с переключателем языка RU/KK и ценами в тенге (₸).',
-            ],
-            note: 'Это концептуальный проект: все цифры, имена клиентов и мастеров — демонстрационные.',
-          },
-          {
-            h: 'Задача',
-            p: ['Администратор салона смотрит цифры между клиентами, часто с телефона. Продукт должен быстро отвечать на три вопроса:'],
-            list: [
-              'Что приносит деньги сегодня?',
-              'Кто перегружен, у кого есть свободные окна и куда можно перераспределить записи?',
-              'Какие клиенты возвращаются и кому пора напомнить о записи?',
-            ],
-            note: 'Дополнительное ограничение: интерфейс полностью двуязычный, поэтому шрифт должен поддерживать кириллицу и казахские буквы (ә, ғ, қ, ң, ө, ұ, ү, һ, і).',
-          },
-          {
-            h: 'Подход',
-            p: [
-              'Один вопрос — один экран. Каждый экран начинается с нескольких цифр, которые отвечают на вопрос, а дальше идёт то, что нужно для действия: график, рейтинг или расписание. Одинаковая шапка на всех экранах содержит навигацию, период, поиск, язык и главное действие — новую запись.',
-            ],
-          },
-          {
-            h: 'Ключевые решения',
-            list: [
-              'Продажи за день — четыре главных показателя со сравнением со вчера, выручка по часам с выделенным пиком, топ услуг и последние оплаты со статусами.',
-              'Загрузка мастеров — средняя загрузка, свободные окна и мастера на смене; полоса загрузки у каждого мастера; расписание на сегодня с отмеченными свободными окнами; подсказка предложить свободные окна на завтра постоянным клиентам.',
-              'Повторные клиенты — доля клиентов, которые возвращаются, и список тех, кто давно не приходил.',
-              'Два языка — переключатель в шапке действует на все экраны; все тексты есть на русском и казахском.',
-              'Мобильная версия для ежедневной проверки — навигация уходит в нижнюю панель, период становится лентой чипов, KPI-карточки идут в одну колонку, график по часам показывает рабочее ядро дня.',
-              'Система, а не только экраны — цвета, шрифты, отступы и радиусы лежат в переменных, а каждый экран собран из компонентов в Figma.',
-            ],
-          },
-          {
-            h: 'Результат',
-            p: [
-              'Три десктопных и три мобильных экрана на двух языках, собранные из одной библиотеки компонентов и одного набора токенов. Как концепт, дизайн пока не проверен на реальных владельцах салонов — это следующий шаг.',
             ],
           },
         ],

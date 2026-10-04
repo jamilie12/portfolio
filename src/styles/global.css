@@ -109,3 +109,6 @@ footer { padding: 32px 0 48px; color: var(--muted); font-size: 14px; border-top:
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .reveal { opacity: 1; transform: none; transition: none; } .btn, .card { transition: none; } }
 
 .band { background: var(--soft); }
+
+#mobile .gallery { grid-template-columns: repeat(3, 1fr); align-items: start; }
+@media (max-width: 760px) { #mobile .gallery { grid-template-columns: 1fr; max-width: 360px; } }

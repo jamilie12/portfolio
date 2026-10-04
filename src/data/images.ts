@@ -4,12 +4,13 @@
 const base = '/images/cases';
 const p = (slug: string, files: string[]) => files.map((f) => `${base}/${slug}/${f}`);
 
-export type GroupKey = 'before' | 'after' | 'screens' | 'research';
+export type GroupKey = 'before' | 'after' | 'screens' | 'research' | 'mobile';
 export const groupTitles: Record<GroupKey, { ru: string; en: string }> = {
   before: { ru: 'До', en: 'Before' },
   after: { ru: 'После', en: 'After' },
   screens: { ru: 'Экраны', en: 'Screens' },
   research: { ru: 'Исследования', en: 'Research' },
+  mobile: { ru: 'Мобильная версия', en: 'Mobile' },
 };
 
 export const caseImages: Record<
@@ -41,5 +42,13 @@ export const caseImages: Record<
     cover: `${base}/medtech-app/01.jpg`,
     groups: [{ key: 'screens', images: p('medtech-app', ['02.jpg', '03.jpg']) }],
     alt: { ru: 'Экраны MedTech-приложения', en: 'MedTech app screens' },
+  },
+  'sulu-dashboard': {
+    cover: `${base}/sulu-dashboard/01.jpg`,
+    groups: [
+      { key: 'screens', images: p('sulu-dashboard', ['02.jpg', '03.jpg', '04.jpg']) },
+      { key: 'mobile', images: p('sulu-dashboard', ['05.jpg', '06.jpg', '07.jpg']) },
+    ],
+    alt: { ru: 'Экраны дашборда Sulu', en: 'Sulu dashboard screens' },
   },
 };

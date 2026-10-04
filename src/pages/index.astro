@@ -1,0 +1,17 @@
+---
+// Корень сайта: перекидывает на язык, который выбирал посетитель, иначе на русский.
+---
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="refresh" content="0; url=/ru/" />
+    <title>Zhamilya Nurtazina</title>
+    <script is:inline>
+      var l = 'ru';
+      try { l = localStorage.getItem('lang') || ((navigator.language || '').startsWith('ru') ? 'ru' : 'en'); } catch (e) {}
+      location.replace('/' + l + '/');
+    </script>
+  </head>
+  <body><a href="/ru/">RU</a> · <a href="/en/">EN</a></body>
+</html>

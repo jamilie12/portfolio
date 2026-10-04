@@ -1,0 +1,106 @@
+---
+import Base from '../../layouts/Base.astro';
+import { content, langs, type Lang } from '../../data/content';
+export function getStaticPaths() { return langs.map((lang) => ({ params: { lang } })); }
+const lang = Astro.params.lang as Lang;
+const t = content[lang];
+const [before, after] = t.hero.line.split(t.hero.markWord);
+---
+<Base lang={lang} switchPath="/">
+  <section class="hero">
+    <div class="wrap">
+      <p class="role reveal">{t.hero.role}</p>
+      <h1 class="reveal">{t.hero.name}</h1>
+      <p class="line reveal">{before}<mark>{t.hero.markWord}</mark>{after}</p>
+      <div class="cta reveal">
+        <a class="btn primary" href="#cases">{t.hero.ctaCases} →</a>
+        <a class="btn ghost" href="#resume">{t.hero.ctaResume}</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap cols">
+      <div class="reveal">
+        <h2>{t.about.title}</h2>
+        {t.about.p.map((x) => <p>{x}</p>)}
+      </div>
+      <div class="reveal">
+        <h3 class="small">{t.about.skillsTitle}</h3>
+        <ul class="chips">{t.about.skills.map((x) => <li>{x}</li>)}</ul>
+        <h3 class="small">{t.about.toolsTitle}</h3>
+        <ul class="chips">{t.about.tools.map((x) => <li>{x}</li>)}</ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="resume" class="band">
+    <div class="wrap resume reveal">
+      <div>
+        <h2>{t.resume.title}</h2>
+        <p>{t.resume.text}</p>
+      </div>
+      {t.resume.file
+        ? <a class="btn primary" href={t.resume.file} download>{t.resume.button} ↓</a>
+        : <span class="btn ghost" aria-disabled="true" style="opacity:.6;cursor:default">{t.resume.soon}</span>}
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="wrap">
+      <h2 class="reveal">{t.experience.title}</h2>
+      <ol class="timeline reveal">
+        {t.experience.items.map((i) => (
+          <li>
+            <span class="period">{i.period}</span>
+            <span><span class="co">{i.company}</span><br /><span class="meta">{i.field}</span></span>
+            <span class="role">{i.role}</span>
+          </li>
+        ))}
+      </ol>
+      <div class="resp cols reveal">
+        <div>
+          <h3 class="small">{t.experience.respTitle}</h3>
+          <p>{t.experience.launch}</p>
+        </div>
+        <div>
+          <h3 class="small">{t.experience.uxTitle}</h3>
+          <ul>{t.experience.ux.map((x) => <li>{x}</li>)}</ul>
+          <h3 class="small">{t.experience.uiTitle}</h3>
+          <ul>{t.experience.ui.map((x) => <li>{x}</li>)}</ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="cases" class="band">
+    <div class="wrap">
+      <h2 class="reveal">{t.casesSection.title}</h2>
+      <p class="reveal" style="margin-bottom:40px">{t.casesSection.intro}</p>
+      <div class="case-grid">
+        {t.cases.map((c) => (
+          <a class="card reveal" href={`/${lang}/cases/${c.slug}/`}>
+            <div class="visual">
+              <div><div class="metric">{c.metric}</div><div class="metric-label">{c.metricLabel}</div></div>
+            </div>
+            <div class="body">
+              <span class="tag">{c.tag}</span>
+              <h3>{c.title}</h3>
+              <p>{c.subtitle}</p>
+              <span class="more">{t.casesSection.open} →</span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section id="contacts" class="contacts">
+    <div class="wrap reveal">
+      <h2>{t.contacts.title}</h2>
+      <p>{t.contacts.text}</p>
+      <p><a class="mail" href={t.contacts.href} rel="noopener">{t.contacts.handle}</a></p>
+      <p style="color:var(--muted)">{t.contacts.more}</p>
+    </div>
+  </section>
+</Base>

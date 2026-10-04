@@ -1,0 +1,38 @@
+---
+import Base from '../../../layouts/Base.astro';
+import { content, langs, type Lang } from '../../../data/content';
+export function getStaticPaths() {
+  return langs.flatMap((lang) => content[lang].cases.map((c) => ({ params: { lang, slug: c.slug } })));
+}
+const lang = Astro.params.lang as Lang;
+const slug = Astro.params.slug as string;
+const t = content[lang];
+const idx = t.cases.findIndex((c) => c.slug === slug);
+const c = t.cases[idx];
+const next = t.cases[(idx + 1) % t.cases.length];
+---
+<Base lang={lang} title={`${c.title} — ${t.hero.name}`} description={c.subtitle} switchPath={`/cases/${slug}/`}>
+  <div class="wrap">
+    <header class="case-head">
+      <a class="back" href={`/${lang}/#cases`}>← {t.casesSection.back}</a>
+      <p class="eyebrow">{c.tag}</p>
+      <h1>{c.title}</h1>
+      <p class="sub">{c.subtitle}</p>
+      <div class="case-cover">{lang === 'ru' ? 'Обложка кейса (добавить изображение)' : 'Case cover (add image)'}</div>
+    </header>
+    <article class="case-body">
+      {c.blocks.map((b) => (
+        <>
+          {b.h && <h2>{b.h}</h2>}
+          {b.p && b.p.map((x) => <p>{x}</p>)}
+          {b.list && <ul>{b.list.map((x) => <li>{x}</li>)}</ul>}
+          {b.note && <p class="callout">{b.note}</p>}
+        </>
+      ))}
+    </article>
+    <nav class="case-nav">
+      <a class="btn ghost" href={`/${lang}/#cases`}>← {t.casesSection.back}</a>
+      <a class="btn primary" href={`/${lang}/cases/${next.slug}/`}>{next.title} →</a>
+    </nav>
+  </div>
+</Base>

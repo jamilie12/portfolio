@@ -30,7 +30,7 @@ type Content = {
   };
   casesSection: { title: string; intro: string; open: string; back: string };
   cases: Case[];
-  contacts: { title: string; text: string; handle: string; href: string; more: string };
+  contacts: { title: string; text: string; handle: string; href: string };
   footer: string;
 };
 
@@ -273,10 +273,9 @@ export const content: Record<Lang, Content> = {
     ],
     contacts: {
       title: 'Contacts',
-      text: 'Want to see more of my work? Message me on Telegram and I will send the full portfolio.',
+      text: 'Get in touch with me on Telegram.',
       handle: '@itsawild',
       href: 'https://t.me/itsawild',
-      more: 'Full portfolio on Figma available on request.',
     },
     footer: '© Zhamilya Nurtazina',
   },
@@ -519,10 +518,9 @@ export const content: Record<Lang, Content> = {
     ],
     contacts: {
       title: 'Контакты',
-      text: 'Хотите увидеть больше моих работ? Напишите мне в Telegram — пришлю полное портфолио.',
+      text: 'Свяжитесь со мной в Telegram.',
       handle: '@itsawild',
       href: 'https://t.me/itsawild',
-      more: 'Полное портфолио в Figma — по запросу.',
     },
     footer: '© Жамиля Нуртазина',
   },

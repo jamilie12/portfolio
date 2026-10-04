@@ -270,6 +270,105 @@ export const content: Record<Lang, Content> = {
           },
         ],
       },
+      {
+        slug: 'flower-delivery-research',
+        tag: 'UX research · Desk research · 2026',
+        title: 'Flower delivery in Kazakhstan',
+        subtitle: 'Research for a mobile app design: the market, user pains, competitors, proto-personas, a customer journey map and an interview plan.',
+        blocks: [
+          {
+            h: 'Overview',
+            p: [
+              'Before designing a mobile app for flower delivery, I studied the market in Kazakhstan (Almaty and Astana): who orders flowers and when, where things go wrong, and what competitors offer. The method was desk research across 12 open sources; the next step is interviews and a survey.',
+            ],
+            note: 'Status: hypotheses to be verified. Interviews and the survey have not been conducted yet; the proto-personas are based on open data.',
+          },
+          {
+            h: 'Market context',
+            p: ['Flowers are bought online, for an occasion, and at the peak.'],
+            list: [
+              '80–90% of deals happen through online channels.',
+              'Up to 30% of florists’ annual revenue falls on March 8; orders grow 10–30 times around the holiday, and 70% of them are tulips.',
+              '70% of buyers are women, who give flowers to colleagues, relatives and teachers. Men (30%) mostly buy for romantic occasions.',
+              'The average check on Flowwow before March 8, 2026 was 25,107 ₸, 13% lower while prices rose about 40%. Single-flower bouquets sell 3 times better than mixed ones.',
+              '70% of imported flowers go to Almaty and Astana; imports in 2024 were $93.6 million (+52.8%).',
+            ],
+            note: 'The key question: how do we help someone confidently send a bouquet for an occasion — on time, within budget, and without the “it looked different in the photo” surprise?',
+          },
+          {
+            h: 'User pains',
+            p: ['The main pain is uncertainty after payment: the person pays in advance, but it is the recipient who sees the result. The pains are confirmed by open sources; their scale in Kazakhstan still has to be verified in interviews.'],
+            list: [
+              'The bouquet does not match the photo — flowers replaced without consent, fewer stems, a different rose length.',
+              'Quality drops at the peak — temporary florists are hired for March 8.',
+              'Late or failed delivery — courier failures, frozen flowers; a bouquet arriving after 20:00 is no longer needed.',
+              'The recipient is not home — repeated courier trips because nobody agreed the time with the recipient.',
+              'Privacy risk — in 2024 a Flowwow bug showed the sender of an anonymous bouquet the recipient’s real address.',
+              'Peak-day prices — the closer to the holiday, the more expensive; early pre-orders are noticeably cheaper.',
+            ],
+          },
+          {
+            h: 'Competitors',
+            p: ['Strong marketplaces and a lot of manual orders. The gap is a well-thought-out occasion gifting flow with local payment.'],
+            list: [
+              'Flowwow (marketplace) — a photo of the bouquet before sending, tracking, chat with the seller, “clarify the address with the recipient”. Gap: quality depends on the seller, and there was an anonymity incident.',
+              'Cvety.kz (local marketplace) — brand awareness and a wide partner catalog. Gap: complaints about replacements without consent and about contacting the recipient.',
+              'Instagram florists (manual orders) — author bouquets and personal contact. Gap: orders by DM or phone, delivery by a taxi courier, no tracking.',
+              'Kloombis (Russian reference) — an occasions calendar, a reminder 3 days ahead, a photo or video report. Gap: not available in Kazakhstan.',
+            ],
+            note: 'Kaspi has over 11 million monthly active users — more than half of the population. Paying with Kaspi in one tap is a baseline expectation, not a bonus.',
+          },
+          {
+            h: 'Proto-personas',
+            p: ['Three gifting scenarios — hypotheses based on desk research, to be refined after the interviews.'],
+            list: [
+              'Aigerim, 32, Almaty — “the caring organiser”. Buys flowers for her mother, colleagues and her child’s teacher. Goal: forget nothing and stay within budget. Fear: overpaying at the peak and getting something different from the photo. What helps: an occasions calendar, early pre-order, a price filter, several addresses in one order.',
+              'Daniyar, 27, Astana — “last minute”. Gives flowers to his girlfriend and mother and often remembers on the day itself. Goal: quickly choose a safe option and pay in a couple of taps. Fear: the bouquet is late or disappoints the recipient. What helps: an exact delivery time, collections by occasion, Kaspi payment, a photo before sending.',
+              'Madina, 24, Shymkent → Almaty — “congratulating from a distance”. Lives in a different city from her family and friends. Goal: delight loved ones and see their reaction. Fear: does not know the exact address and wants it to be a surprise. What helps: “Clarify the address with the recipient”, anonymity, a photo of the handover.',
+            ],
+          },
+          {
+            h: 'Customer journey: ordering a bouquet for March 8',
+            p: ['I mapped Aigerim’s journey in seven stages: trigger, choice, checkout, payment, waiting, handover and after. The emotions go from anxiety and doubt to irritation at checkout and payment, then back to anxiety while waiting and relief at the handover.'],
+            list: [
+              'Trigger: a late order is pricier and has less choice → a reminder 7 days ahead with a pre-order.',
+              'Choice: studio photos and an unclear size → real photos from reviews, size in cm, a budget filter.',
+              'Checkout: one order = one address → saved recipients and a multi-address order.',
+              'Payment: extra steps, a transfer to the florist with no guarantees → Kaspi Pay in one tap.',
+              'Waiting: no status, flowers replaced without asking → a photo before sending, approval of replacements, tracking.',
+              'Handover: the recipient is not home → agreeing the time with the recipient, a photo of the handover.',
+              'After: nothing is saved → the occasion date in a calendar, repeat in one tap.',
+            ],
+          },
+          {
+            h: 'Design hypotheses',
+            p: ['Remove uncertainty at every step after payment. For each hypothesis I noted which pain it answers and how to test it.'],
+            list: [
+              'A photo of the finished bouquet and agreeing replacements before sending will raise trust. Test: a survey (importance 1–5), interviews about replacement stories.',
+              'An occasions calendar with a reminder 7 days ahead will move some orders to early pre-orders. Test: a survey — how many days ahead people order.',
+              'A budget filter and collections by occasion will shorten selection time. Test: interviews — how they chose their last bouquet.',
+              '“Clarify the address and time with the recipient” with anonymity protection will reduce failed deliveries. Test: interviews with senders and recipients.',
+              'One-tap Kaspi payment will increase payment conversion. Test: a survey on payment method, a usability test of the prototype.',
+            ],
+          },
+          {
+            h: 'Research plan',
+            p: ['The next step is to test the hypotheses with people.'],
+            list: [
+              'Qualitative: 8–10 in-depth interviews with Almaty and Astana residents aged 20–45 who ordered flowers with delivery in the last 6 months (about 6 women and 4 men, matching the 70/30 market split, plus 1–2 recipients). 30–40 minutes online in Russian or Kazakh; participants are asked to show their last order or chat. Recruiting: acquaintances, Telegram chats, Instagram stories.',
+              'Quantitative: a survey of 80–150 people with 10–12 questions (occasion, channel, budget, how many days ahead they ordered, payment, which problems occurred, importance of features from 1 to 5). Result: the top 3 pains and top 3 features, from which the MVP and the first screens will grow.',
+              'The 30–40 minute interview guide: warm-up (5 minutes), the last order step by step (15), a bad experience (7), holidays (5), wrap-up (3).',
+            ],
+            note: 'The rule: ask about past experience, not the future (“Would you use…?”). Follow up with “why?” and “show me how”.',
+          },
+          {
+            h: 'Outcome and next steps',
+            p: [
+              'The desk research showed that the main problem of flower services is not choice but uncertainty after payment, and produced five design hypotheses. The next stage is interviews and a survey, followed by the MVP and the first app screens.',
+            ],
+          },
+        ],
+      },
     ],
     contacts: {
       title: 'Contacts',
@@ -511,6 +610,105 @@ export const content: Record<Lang, Content> = {
               '3D-карта тела — интерактивная 3D-модель для точного выбора зоны боли.',
               'Персональное расписание и аналитика — дашборд с метриками за день/неделю/месяц: шаги, дистанция, калории, завершённые сессии, прогресс в управлении болью.',
               'Контент и профиль — блог, лента новостей, инструкция по настройке устройства и единый профиль.',
+            ],
+          },
+        ],
+      },
+      {
+        slug: 'flower-delivery-research',
+        tag: 'UX research · Desk research · 2026',
+        title: 'Доставка цветов в Казахстане',
+        subtitle: 'Исследование для дизайна мобильного приложения: рынок, боли пользователей, конкуренты, прото-персоны, CJM и план интервью.',
+        blocks: [
+          {
+            h: 'Обзор',
+            p: [
+              'Перед проектированием мобильного приложения для доставки цветов я изучила рынок Казахстана (Алматы и Астана): кто и когда заказывает цветы, где возникают проблемы, что предлагают конкуренты. Метод — desk research по 12 открытым источникам; следующий шаг — интервью и опрос.',
+            ],
+            note: 'Статус: гипотезы к проверке. Интервью и опрос ещё не проводились, прото-персоны построены на открытых данных.',
+          },
+          {
+            h: 'Контекст рынка',
+            p: ['Цветы покупают онлайн, по поводу и в пике.'],
+            list: [
+              '80–90% сделок проходят через онлайн-каналы.',
+              'До 30% годовой выручки флористов приходится на 8 Марта; рост заказов к празднику в 10–30 раз, 70% из них — тюльпаны.',
+              '70% покупателей — женщины: дарят коллегам, родным, учителям. Мужчины (30%) — в основном к романтическим поводам.',
+              'Средний чек на Flowwow к 8 Марта 2026 — 25 107 ₸, на 13% ниже при росте цен около 40%. Монобукеты продаются в 3 раза лучше сборных.',
+              '70% импортных цветов уходит в Алматы и Астану; импорт в 2024 году — $93,6 млн (+52,8%).',
+            ],
+            note: 'Главный вопрос: как помочь человеку уверенно отправить букет по поводу — вовремя, в рамках бюджета и без сюрприза «на фото было другое»?',
+          },
+          {
+            h: 'Боли пользователей',
+            p: ['Главная боль — неопределённость после оплаты: человек платит заранее, а результат видит не он, а получатель. Боли подтверждены открытыми источниками, их масштаб для Казахстана предстоит проверить в интервью.'],
+            list: [
+              'Букет не как на фото — замена цветов без согласия, меньше стеблей, другая длина роз.',
+              'Качество падает в пик — на 8 Марта нанимают временных флористов.',
+              'Опоздание и сорванная доставка — сбои курьерских служб, замёрзшие цветы; букет после 20:00 уже «не нужен».',
+              'Получатель не на месте — повторные выезды курьера, потому что с получателем никто не согласовал время.',
+              'Риск для приватности — в 2024 году баг Flowwow показал отправителю анонимного букета реальный адрес получательницы.',
+              'Цена в пиковые дни — чем ближе к празднику, тем дороже; ранний предзаказ заметно дешевле.',
+            ],
+          },
+          {
+            h: 'Конкуренты',
+            p: ['Сильные маркетплейсы и много ручных заказов. Пробел — продуманный сценарий подарка по поводу с местной оплатой.'],
+            list: [
+              'Flowwow (маркетплейс) — фото букета перед отправкой, трекинг, чат с продавцом, «уточнить адрес у получателя». Пробел: качество зависит от продавца, был инцидент с анонимностью.',
+              'Cvety.kz (местный маркетплейс) — узнаваемость и широкий каталог партнёров. Пробел: жалобы на замены без согласия и связь с получателем.',
+              'Instagram-флористы (ручные заказы) — авторские букеты, личное общение. Пробел: заказ в директе или по телефону, доставка Яндекс-курьером, нет трекинга.',
+              'Kloombis (референс, РФ) — календарь поводов, напоминание за 3 дня, фото- и видеоотчёт. Пробел: нет в Казахстане.',
+            ],
+            note: 'У Kaspi больше 11 млн активных пользователей в месяц — больше половины населения. Оплата через Kaspi в один тап — базовое ожидание, а не бонус.',
+          },
+          {
+            h: 'Прото-персоны',
+            p: ['Три сценария подарка — гипотезы на основе desk research, которые уточним после интервью.'],
+            list: [
+              'Айгерим, 32, Алматы — «заботливая организаторша». Покупает цветы маме, коллегам, учителю ребёнка. Цель: ничего не забыть и уложиться в бюджет. Страх: переплатить в пик и получить не то, что на фото. Поможет: календарь поводов, ранний предзаказ, фильтр по цене, несколько адресов в одном заказе.',
+              'Данияр, 27, Астана — «в последний момент». Дарит цветы девушке и маме, часто вспоминает в день повода. Цель: быстро выбрать безопасный вариант и оплатить в пару тапов. Страх: букет опоздает или разочарует получательницу. Поможет: точное время доставки, подборки «по поводу», оплата Kaspi, фото перед отправкой.',
+              'Мадина, 24, Шымкент → Алматы — «поздравляет на расстоянии». Живёт в другом городе, чем семья и друзья. Цель: порадовать близких и увидеть их реакцию. Страх: не знает точного адреса, хочет сюрприз. Поможет: «Уточнить адрес у получателя», анонимность, фото вручения.',
+            ],
+          },
+          {
+            h: 'Customer journey: заказ букета к 8 Марта',
+            p: ['Я разобрала путь Айгерим на семь этапов: триггер, выбор, оформление, оплата, ожидание, вручение, после. Эмоции по пути идут от тревоги и сомнения к раздражению на оформлении и оплате, затем снова к тревоге в ожидании и облегчению при вручении.'],
+            list: [
+              'Триггер: поздний заказ — дороже и меньше выбор → напоминание за 7 дней с предзаказом.',
+              'Выбор: студийные фото и непонятный размер → реальные фото из отзывов, размер в см, фильтр по бюджету.',
+              'Оформление: один заказ — один адрес → сохранённые получатели и мультиадресный заказ.',
+              'Оплата: лишние шаги, перевод флористу без гарантий → Kaspi Pay в один тап.',
+              'Ожидание: нет статуса, замена цветов без спроса → фото перед отправкой, согласование замены, трекинг.',
+              'Вручение: получателя нет дома → согласование времени с получателем, фото вручения.',
+              'После: ничего не сохраняется → дата повода в календаре, повтор в один тап.',
+            ],
+          },
+          {
+            h: 'Гипотезы для дизайна',
+            p: ['Снять неопределённость на каждом шаге после оплаты. Для каждой гипотезы указано, какую боль она закрывает и как её проверить.'],
+            list: [
+              'Фото готового букета и согласование замены до отправки повысят доверие. Проверка: опрос (важность 1–5), интервью с историями замен.',
+              'Календарь поводов с напоминанием за 7 дней переведёт часть заказов в ранний предзаказ. Проверка: опрос — за сколько дней заказывают.',
+              'Фильтр по бюджету и подборки «по поводу» сократят время выбора. Проверка: интервью — как выбирали последний букет.',
+              '«Уточнить адрес и время у получателя» с защитой анонимности снизит число сорванных доставок. Проверка: интервью с отправителями и получателями.',
+              'Оплата Kaspi в один тап увеличит конверсию в оплату. Проверка: опрос про способ оплаты, юзабилити-тест прототипа.',
+            ],
+          },
+          {
+            h: 'План исследования',
+            p: ['Следующий шаг — проверить гипотезы на людях.'],
+            list: [
+              'Качественно: 8–10 глубинных интервью с жителями Алматы и Астаны 20–45 лет, заказывавшими цветы с доставкой за последние 6 месяцев (около 6 женщин и 4 мужчин, как 70/30 на рынке, плюс 1–2 получателя). 30–40 минут онлайн на русском или казахском; просим показать последний заказ или переписку. Рекрутинг: знакомые, Telegram-чаты, сторис в Instagram.',
+              'Количественно: опрос на 80–150 человек, 10–12 вопросов (повод, канал, бюджет, за сколько дней заказывали, оплата, какие проблемы случались, важность функций от 1 до 5). Результат: топ-3 боли и топ-3 функции, из которых вырастут MVP и первые экраны.',
+              'Гайд интервью на 30–40 минут: разминка (5 минут), последний заказ по шагам (15), неудачный опыт (7), праздники (5), завершение (3).',
+            ],
+            note: 'Правило: спрашиваем о прошлом опыте, а не о будущем («Вы бы пользовались…?»). Уточняем «почему?» и «покажите, как?».',
+          },
+          {
+            h: 'Итог и следующие шаги',
+            p: [
+              'Desk research показал, что главная проблема цветочных сервисов — не выбор, а неопределённость после оплаты, и сформулировал пять гипотез для дизайна. Следующий этап — интервью и опрос, затем MVP и первые экраны приложения.',
             ],
           },
         ],

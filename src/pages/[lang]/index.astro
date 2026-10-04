@@ -15,7 +15,7 @@ const [before, after] = t.hero.line.split(t.hero.markWord);
       <p class="line reveal">{before}<mark>{t.hero.markWord}</mark>{after}</p>
       <div class="cta reveal">
         <a class="btn primary" href="#cases">{t.hero.ctaCases} →</a>
-        <a class="btn ghost" href="#resume">{t.hero.ctaResume}</a>
+        <a class="btn ghost" href="#contacts">{t.hero.ctaContact}</a>
       </div>
     </div>
   </section>
@@ -32,18 +32,6 @@ const [before, after] = t.hero.line.split(t.hero.markWord);
         <h3 class="small">{t.about.toolsTitle}</h3>
         <ul class="chips">{t.about.tools.map((x) => <li>{x}</li>)}</ul>
       </div>
-    </div>
-  </section>
-
-  <section id="resume" class="band">
-    <div class="wrap resume reveal">
-      <div>
-        <h2>{t.resume.title}</h2>
-        <p>{t.resume.text}</p>
-      </div>
-      {t.resume.file
-        ? <a class="btn primary" href={t.resume.file} download>{t.resume.button} ↓</a>
-        : <span class="btn ghost" aria-disabled="true" style="opacity:.6;cursor:default">{t.resume.soon}</span>}
     </div>
   </section>
 
@@ -83,7 +71,6 @@ const [before, after] = t.hero.line.split(t.hero.markWord);
           <a class="card reveal" href={`/${lang}/cases/${c.slug}/`}>
             <div class="visual">
               <img src={caseImages[c.slug].cover} alt={caseImages[c.slug].alt[lang]} loading="lazy" />
-              <span class="metric-pill"><b>{c.metric}</b> {c.metricLabel}</span>
             </div>
             <div class="body">
               <span class="tag">{c.tag}</span>

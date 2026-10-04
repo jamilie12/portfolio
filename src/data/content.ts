@@ -1,5 +1,5 @@
 // Весь текст сайта: оригинал EN взят с jamilie.tilda.ws/portfolio, RU — перевод (проверить).
-// TODO(контент): контакты, ссылка на Figma, PDF резюме, реальные цифры результатов по кейсам.
+// TODO(контент): при желании — резюме (PDF) и реальные цифры результатов по кейсам.
 
 export type Lang = 'ru' | 'en';
 export const langs: Lang[] = ['ru', 'en'];
@@ -10,17 +10,14 @@ export type Case = {
   tag: string;
   title: string;
   subtitle: string;
-  metric: string;
-  metricLabel: string;
   blocks: Block[];
 };
 
 type Content = {
   meta: { title: string; description: string };
-  nav: { about: string; resume: string; experience: string; cases: string; contacts: string };
-  hero: { name: string; role: string; line: string; markWord: string; ctaCases: string; ctaResume: string };
+  nav: { about: string; experience: string; cases: string; contacts: string };
+  hero: { name: string; role: string; line: string; markWord: string; ctaCases: string; ctaContact: string };
   about: { title: string; p: string[]; skillsTitle: string; skills: string[]; toolsTitle: string; tools: string[] };
-  resume: { title: string; text: string; button: string; file: string; soon: string };
   experience: {
     title: string;
     items: { company: string; field: string; role: string; period: string }[];
@@ -41,16 +38,16 @@ export const content: Record<Lang, Content> = {
   en: {
     meta: {
       title: 'Zhamilya Nurtazina — UX/UI designer',
-      description: 'UX/UI designer with 5+ years in FinTech and EdTech. Cases, experience and resume.',
+      description: 'UX/UI designer with 5+ years in FinTech and EdTech. Cases and experience.',
     },
-    nav: { about: 'About', resume: 'Resume', experience: 'Experience', cases: 'Cases', contacts: 'Contacts' },
+    nav: { about: 'About', experience: 'Experience', cases: 'Cases', contacts: 'Contacts' },
     hero: {
       name: 'Zhamilya Nurtazina',
       role: 'UX/UI designer',
       line: 'I design clear fintech and education products — from research to launch.',
       markWord: 'clear',
       ctaCases: 'View cases',
-      ctaResume: 'Resume',
+      ctaContact: 'Contact me',
     },
     about: {
       title: 'About me',
@@ -68,13 +65,6 @@ export const content: Record<Lang, Content> = {
       ],
       toolsTitle: 'Tools',
       tools: ['Figma', 'Miro', 'Notion', 'Jira', 'Trello'],
-    },
-    resume: {
-      title: 'Resume',
-      text: 'Download my resume as a PDF.',
-      button: 'Download PDF',
-      file: '', // TODO: '/resume-en.pdf' после добавления файла в public/
-      soon: 'PDF will be available soon.',
     },
     experience: {
       title: 'Experience',
@@ -112,8 +102,6 @@ export const content: Record<Lang, Content> = {
         title: 'Website Redesign',
         subtitle:
           'Financial platform that brings together financial products, market insights, news, analytics, and educational content.',
-        metric: 'Media hub',
-        metricLabel: 'one entry point for 7 content formats',
         blocks: [
           {
             h: 'Overview',
@@ -163,8 +151,6 @@ export const content: Record<Lang, Content> = {
         tag: 'Freedom Academy · EdTech',
         title: 'Freedom Academy 2.0',
         subtitle: 'An end-to-end redesign of an educational platform, from UX analysis to final handoff and implementation.',
-        metric: 'End-to-end',
-        metricLabel: 'registration → course → tests → certificate',
         blocks: [
           {
             h: 'Overview',
@@ -219,8 +205,6 @@ export const content: Record<Lang, Content> = {
         tag: 'Freedom Academy · Research',
         title: 'Freedom Academy 1.0',
         subtitle: 'Research, information architecture, user flow and prototyping.',
-        metric: 'Research',
-        metricLabel: 'benchmarking, interviews, job stories',
         blocks: [
           {
             h: 'Background',
@@ -255,8 +239,6 @@ export const content: Record<Lang, Content> = {
         tag: 'MedTech · Mobile app',
         title: 'MedTech mobile app',
         subtitle: 'A companion app for a wearable pain therapy and neuromodulation device.',
-        metric: '3D body map',
-        metricLabel: 'pinpoint pain, control the device',
         blocks: [
           {
             h: 'About',
@@ -302,16 +284,16 @@ export const content: Record<Lang, Content> = {
   ru: {
     meta: {
       title: 'Жамиля Нуртазина — UX/UI дизайнер',
-      description: 'UX/UI дизайнер, 5+ лет опыта в финтехе и EdTech. Кейсы, опыт и резюме.',
+      description: 'UX/UI дизайнер, 5+ лет опыта в финтехе и EdTech. Кейсы и опыт.',
     },
-    nav: { about: 'Обо мне', resume: 'Резюме', experience: 'Опыт', cases: 'Кейсы', contacts: 'Контакты' },
+    nav: { about: 'Обо мне', experience: 'Опыт', cases: 'Кейсы', contacts: 'Контакты' },
     hero: {
       name: 'Жамиля Нуртазина',
       role: 'UX/UI дизайнер',
       line: 'Проектирую понятные финтех- и образовательные продукты — от исследования до запуска.',
       markWord: 'понятные',
       ctaCases: 'Смотреть кейсы',
-      ctaResume: 'Резюме',
+      ctaContact: 'Связаться',
     },
     about: {
       title: 'Обо мне',
@@ -329,13 +311,6 @@ export const content: Record<Lang, Content> = {
       ],
       toolsTitle: 'Инструменты',
       tools: ['Figma', 'Miro', 'Notion', 'Jira', 'Trello'],
-    },
-    resume: {
-      title: 'Резюме',
-      text: 'Скачайте моё резюме в PDF.',
-      button: 'Скачать PDF',
-      file: '', // TODO: '/resume-ru.pdf' после добавления файла в public/
-      soon: 'PDF скоро появится.',
     },
     experience: {
       title: 'Опыт работы',
@@ -373,8 +348,6 @@ export const content: Record<Lang, Content> = {
         title: 'Редизайн сайта',
         subtitle:
           'Финансовая платформа, объединяющая финансовые продукты, аналитику рынка, новости и образовательный контент.',
-        metric: 'Медиахаб',
-        metricLabel: 'единая точка входа для 7 форматов контента',
         blocks: [
           {
             h: 'Обзор',
@@ -424,8 +397,6 @@ export const content: Record<Lang, Content> = {
         tag: 'Freedom Academy · EdTech',
         title: 'Freedom Academy 2.0',
         subtitle: 'Сквозной редизайн образовательной платформы: от UX-анализа до финальной передачи в разработку.',
-        metric: 'Сквозной',
-        metricLabel: 'регистрация → курс → тесты → сертификат',
         blocks: [
           {
             h: 'Обзор',
@@ -480,8 +451,6 @@ export const content: Record<Lang, Content> = {
         tag: 'Freedom Academy · Исследование',
         title: 'Freedom Academy 1.0',
         subtitle: 'Исследование, информационная архитектура, user flow и прототипирование.',
-        metric: 'Исследование',
-        metricLabel: 'бенчмарк, интервью, job stories',
         blocks: [
           {
             h: 'Предыстория',
@@ -516,8 +485,6 @@ export const content: Record<Lang, Content> = {
         tag: 'MedTech · Мобильное приложение',
         title: 'MedTech: мобильное приложение',
         subtitle: 'Приложение-компаньон для носимого устройства для терапии боли и нейромодуляции.',
-        metric: '3D-карта тела',
-        metricLabel: 'указать боль, управлять устройством',
         blocks: [
           {
             h: 'О проекте',

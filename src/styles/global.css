@@ -56,10 +56,6 @@ mark { background: linear-gradient(transparent 58%, var(--mark) 58%, var(--mark)
 .chips li { padding: 9px 16px; border: 1px solid var(--line); border-radius: 999px; font-weight: 600; font-size: 15px; background: #fff; }
 h3.small { font-size: 14px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin-bottom: 14px; }
 
-/* resume */
-.band { background: var(--soft); }
-.resume { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px; }
-.resume h2 { margin: 0 0 12px; }
 
 /* experience */
 .timeline { list-style: none; margin: 0 0 64px; padding: 0; border-top: 1px solid var(--line); }
@@ -79,10 +75,6 @@ h3.small { font-size: 14px; letter-spacing: .06em; text-transform: uppercase; co
 .card:hover { transform: translateY(-4px); box-shadow: 0 18px 40px rgba(14,14,16,.08); }
 .card .visual { position: relative; aspect-ratio: 16 / 10; background: var(--soft); border-bottom: 1px solid var(--line); overflow: hidden; }
 .card .visual img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
-.metric-pill { position: absolute; left: 16px; bottom: 16px; right: 16px; width: fit-content; max-width: calc(100% - 32px); background: rgba(255,255,255,.94); border-radius: 999px; padding: 8px 16px; font-size: 13px; color: var(--muted); }
-.metric-pill b { color: var(--ink); margin-right: 4px; }
-.card .metric { font-size: clamp(34px, 4.2vw, 52px); font-weight: 800; letter-spacing: -0.03em; line-height: 1; }
-.card .metric-label { color: var(--muted); font-size: 14px; margin-top: 10px; max-width: 28ch; }
 .card .body { padding: 24px 26px 28px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
 .card .tag { font-size: 13px; font-weight: 700; color: var(--muted); }
 .card h3 { font-size: 26px; }

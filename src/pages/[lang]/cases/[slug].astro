@@ -1,6 +1,7 @@
 ---
 import Base from '../../../layouts/Base.astro';
 import { content, langs, type Lang } from '../../../data/content';
+import { caseImages } from '../../../data/images';
 export function getStaticPaths() {
   return langs.flatMap((lang) => content[lang].cases.map((c) => ({ params: { lang, slug: c.slug } })));
 }
@@ -9,6 +10,7 @@ const slug = Astro.params.slug as string;
 const t = content[lang];
 const idx = t.cases.findIndex((c) => c.slug === slug);
 const c = t.cases[idx];
+const img = caseImages[slug];
 const next = t.cases[(idx + 1) % t.cases.length];
 ---
 <Base lang={lang} title={`${c.title} — ${t.hero.name}`} description={c.subtitle} switchPath={`/cases/${slug}/`}>
@@ -18,7 +20,7 @@ const next = t.cases[(idx + 1) % t.cases.length];
       <p class="eyebrow">{c.tag}</p>
       <h1>{c.title}</h1>
       <p class="sub">{c.subtitle}</p>
-      <div class="case-cover">{lang === 'ru' ? 'Обложка кейса (добавить изображение)' : 'Case cover (add image)'}</div>
+      <img class="case-cover" src={img.cover} alt={img.alt[lang]} />
     </header>
     <article class="case-body">
       {c.blocks.map((b) => (
@@ -30,6 +32,9 @@ const next = t.cases[(idx + 1) % t.cases.length];
         </>
       ))}
     </article>
+    <div class="gallery">
+      {img.gallery.map((src) => <img src={src} alt={img.alt[lang]} loading="lazy" />)}
+    </div>
     <nav class="case-nav">
       <a class="btn ghost" href={`/${lang}/#cases`}>← {t.casesSection.back}</a>
       <a class="btn primary" href={`/${lang}/cases/${next.slug}/`}>{next.title} →</a>

@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import { content, langs, type Lang } from '../../data/content';
+import { caseImages } from '../../data/images';
 export function getStaticPaths() { return langs.map((lang) => ({ params: { lang } })); }
 const lang = Astro.params.lang as Lang;
 const t = content[lang];
@@ -81,7 +82,8 @@ const [before, after] = t.hero.line.split(t.hero.markWord);
         {t.cases.map((c) => (
           <a class="card reveal" href={`/${lang}/cases/${c.slug}/`}>
             <div class="visual">
-              <div><div class="metric">{c.metric}</div><div class="metric-label">{c.metricLabel}</div></div>
+              <img src={caseImages[c.slug].cover} alt={caseImages[c.slug].alt[lang]} loading="lazy" />
+              <span class="metric-pill"><b>{c.metric}</b> {c.metricLabel}</span>
             </div>
             <div class="body">
               <span class="tag">{c.tag}</span>

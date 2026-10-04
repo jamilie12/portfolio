@@ -1,7 +1,7 @@
 ---
 import Base from '../../../layouts/Base.astro';
 import { content, langs, type Lang } from '../../../data/content';
-import { caseImages } from '../../../data/images';
+import { caseImages, groupTitles } from '../../../data/images';
 export function getStaticPaths() {
   return langs.flatMap((lang) => content[lang].cases.map((c) => ({ params: { lang, slug: c.slug } })));
 }
@@ -32,9 +32,14 @@ const next = t.cases[(idx + 1) % t.cases.length];
         </>
       ))}
     </article>
-    <div class="gallery">
-      {img.gallery.map((src) => <img src={src} alt={img.alt[lang]} loading="lazy" />)}
-    </div>
+    {img.groups.map((g) => (
+      <section class="gallery-group" id={g.key}>
+        <h2>{groupTitles[g.key][lang]}</h2>
+        <div class="gallery">
+          {g.images.map((src) => <img src={src} alt={`${groupTitles[g.key][lang]} — ${img.alt[lang]}`} loading="lazy" />)}
+        </div>
+      </section>
+    ))}
     <nav class="case-nav">
       <a class="btn ghost" href={`/${lang}/#cases`}>← {t.casesSection.back}</a>
       <a class="btn primary" href={`/${lang}/cases/${next.slug}/`}>{next.title} →</a>

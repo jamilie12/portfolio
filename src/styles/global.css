@@ -86,7 +86,9 @@ h3.small { font-size: 14px; letter-spacing: .06em; text-transform: uppercase; co
 .case-head h1 { font-size: clamp(40px, 7vw, 84px); margin: 12px 0 20px; }
 .case-head .sub { font-size: clamp(19px, 2.2vw, 24px); color: var(--muted); max-width: 40ch; }
 .case-cover { display: block; width: 100%; margin: 40px 0 0; border-radius: var(--radius); background: var(--soft); border: 1px solid var(--line); }
-.gallery { display: grid; gap: 24px; margin-top: 64px; }
+.gallery-group { padding: 64px 0 0; }
+.gallery-group h2 { font-size: clamp(26px, 3.2vw, 36px); margin-bottom: 24px; }
+.gallery { display: grid; gap: 24px; }
 .gallery img { width: 100%; height: auto; border-radius: var(--radius); border: 1px solid var(--line); background: var(--soft); }
 .case-body { max-width: 760px; }
 .case-body h2 { font-size: clamp(26px, 3.2vw, 36px); margin: 56px 0 16px; }

@@ -19,18 +19,21 @@ export const caseImages: Record<
   'website-redesign': {
     cover: `${base}/website-redesign/01.jpg`,
     groups: [
-      { key: 'before', images: p('website-redesign', ['02.jpg']) },
-      { key: 'after', images: p('website-redesign', ['03.jpg', '04.jpg', '05.jpg', '06.jpg']) },
+      { key: 'before', images: p('website-redesign', ['02.jpg', '03.jpg']) },
+      { key: 'after', images: p('website-redesign', ['04.jpg', '05.jpg', '06.jpg']) },
     ],
     alt: { ru: 'Редизайн сайта Freedom Broker', en: 'Freedom Broker website redesign' },
   },
   'freedom-academy-2': {
     cover: `${base}/freedom-academy-2/01.jpg`,
-    groups: [{ key: 'screens', images: p('freedom-academy-2', ['02.jpg', '03.jpg', '04.jpg', '05.jpg', '06.jpg', '07.jpg', '08.jpg']) }],
+    groups: [
+      { key: 'before', images: p('freedom-academy-2', ['02.jpg', '06.jpg']) },
+      { key: 'after', images: p('freedom-academy-2', ['03.jpg', '04.jpg', '05.jpg', '07.jpg', '08.jpg']) },
+    ],
     alt: { ru: 'Экраны Freedom Academy 2.0', en: 'Freedom Academy 2.0 screens' },
   },
   'freedom-academy-1': {
-    cover: `${base}/freedom-academy-1/01.png`,
+    cover: `${base}/freedom-academy-1/cover.jpg`,
     groups: [{ key: 'research', images: p('freedom-academy-1', ['01.png', '02.png', '03.png']) }],
     alt: { ru: 'Исследование Freedom Academy 1.0', en: 'Freedom Academy 1.0 research' },
   },

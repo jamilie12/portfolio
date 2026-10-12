@@ -34,7 +34,7 @@ const next = t.cases[(idx + 1) % t.cases.length];
     </article>
     {img.video && (
       <section class="gallery-group" id="video">
-        <h2>{videoTitle[lang]}</h2>
+        <h2>{(img.videoTitle ?? videoTitle)[lang]}</h2>
         <video class="case-video" src={img.video} poster={img.cover} controls playsinline preload="metadata"></video>
       </section>
     )}

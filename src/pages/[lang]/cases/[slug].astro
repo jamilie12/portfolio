@@ -1,7 +1,7 @@
 ---
 import Base from '../../../layouts/Base.astro';
 import { content, langs, type Lang } from '../../../data/content';
-import { caseImages, groupTitles } from '../../../data/images';
+import { caseImages, groupTitles, videoTitle } from '../../../data/images';
 export function getStaticPaths() {
   return langs.flatMap((lang) => content[lang].cases.map((c) => ({ params: { lang, slug: c.slug } })));
 }
@@ -32,6 +32,12 @@ const next = t.cases[(idx + 1) % t.cases.length];
         </>
       ))}
     </article>
+    {img.video && (
+      <section class="gallery-group" id="video">
+        <h2>{videoTitle[lang]}</h2>
+        <video class="case-video" src={img.video} poster={img.cover} controls playsinline preload="metadata"></video>
+      </section>
+    )}
     {img.groups.map((g) => (
       <section class="gallery-group" id={g.key}>
         <h2>{groupTitles[g.key][lang]}</h2>

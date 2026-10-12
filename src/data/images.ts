@@ -12,9 +12,11 @@ export const groupTitles: Record<GroupKey, { ru: string; en: string }> = {
   research: { ru: 'Исследования', en: 'Research' },
 };
 
+export const videoTitle = { ru: 'Видео', en: 'Video' };
+
 export const caseImages: Record<
   string,
-  { cover: string; groups: { key: GroupKey; images: string[] }[]; alt: { ru: string; en: string } }
+  { cover: string; video?: string; groups: { key: GroupKey; images: string[] }[]; alt: { ru: string; en: string } }
 > = {
   'website-redesign': {
     cover: `${base}/website-redesign/01.jpg`,
@@ -34,6 +36,7 @@ export const caseImages: Record<
   },
   'freedom-academy-1': {
     cover: `${base}/freedom-academy-1/cover.jpg`,
+    video: '/videos/freedom-academy-1.mp4',
     groups: [{ key: 'research', images: p('freedom-academy-1', ['01.png', '02.png', '03.png']) }],
     alt: { ru: 'Исследование Freedom Academy 1.0', en: 'Freedom Academy 1.0 research' },
   },

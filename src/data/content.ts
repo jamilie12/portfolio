@@ -257,7 +257,7 @@ const allContent: Record<Lang, Content> = {
           {
             h: 'The approach',
             p: [
-              'I conducted competitor analysis in health-tech and interviewed physical therapy patients to understand their key pain points. The goal was to build a cohesive ecosystem connecting the physical device to a tailored digital recovery plan. I mapped out a step-by-step onboarding experience, smooth Bluetooth pairing, and an intuitive 3D body mapping interaction that lowers the friction of pinpointing exact pain locations.',
+              'I studied the competitor analyses in health-tech and the physical therapy patient interviews already gathered by the product manager to understand the key pain points. The goal was to build a cohesive platform connecting the physical device to a tailored digital recovery plan. Together we designed a step-by-step onboarding experience, smooth Bluetooth pairing, and an intuitive 3D body mapping interaction that lowers the friction of pinpointing exact pain locations.',
             ],
           },
           {
@@ -602,7 +602,7 @@ const allContent: Record<Lang, Content> = {
           {
             h: 'Подход',
             p: [
-              'Я провела анализ конкурентов в health-tech и интервью с пациентами физиотерапии, чтобы понять ключевые боли. Цель — единая экосистема, соединяющая физическое устройство с персональным цифровым планом восстановления. Я спроектировала пошаговый онбординг, простое Bluetooth-подключение и понятное 3D-взаимодействие, которое снижает трение при выборе точной зоны боли.',
+              'Изучила уже собранные продакт-менеджером анализы конкурентов в health-tech и интервью с пациентами физиотерапии, чтобы понять ключевые боли. Цель — единая платформа, соединяющая физическое устройство с персональным цифровым планом восстановления. Мы спроектировали пошаговый онбординг, простое Bluetooth-подключение и понятное 3D-взаимодействие, которое снижает трение при выборе точной зоны боли.',
             ],
           },
           {

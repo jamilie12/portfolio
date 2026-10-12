@@ -11,6 +11,8 @@ export type Case = {
   title: string;
   subtitle: string;
   blocks: Block[];
+  // true — кейс не попадает ни в список, ни в сборку страниц (контент остаётся в коде)
+  hidden?: boolean;
 };
 
 type Content = {
@@ -34,7 +36,7 @@ type Content = {
   footer: string;
 };
 
-export const content: Record<Lang, Content> = {
+const allContent: Record<Lang, Content> = {
   en: {
     meta: {
       title: 'Zhamilya Nurtazina — UX/UI designer',
@@ -272,6 +274,7 @@ export const content: Record<Lang, Content> = {
       },
       {
         slug: 'flower-delivery-research',
+        hidden: true,
         tag: 'UX research · Desk research · 2026',
         title: 'Flower delivery in Kazakhstan',
         subtitle: 'Research for a mobile app design: the market, user pains, competitors, proto-personas, a customer journey map and an interview plan.',
@@ -616,6 +619,7 @@ export const content: Record<Lang, Content> = {
       },
       {
         slug: 'flower-delivery-research',
+        hidden: true,
         tag: 'UX research · Desk research · 2026',
         title: 'Доставка цветов в Казахстане',
         subtitle: 'Исследование для дизайна мобильного приложения: рынок, боли пользователей, конкуренты, прото-персоны, CJM и план интервью.',
@@ -723,3 +727,8 @@ export const content: Record<Lang, Content> = {
     footer: '© Жамиля Нуртазина',
   },
 };
+
+// Скрытые кейсы убираем здесь, чтобы список, навигация «следующий кейс» и getStaticPaths их не видели.
+export const content: Record<Lang, Content> = Object.fromEntries(
+  langs.map((l) => [l, { ...allContent[l], cases: allContent[l].cases.filter((c) => !c.hidden) }]),
+) as Record<Lang, Content>;

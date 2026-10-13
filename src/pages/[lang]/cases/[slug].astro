@@ -13,6 +13,9 @@ const c = t.cases[idx];
 const img = caseImages[slug];
 const next = t.cases[(idx + 1) % t.cases.length];
 const mainBlocks = c.blocks.filter((b) => b.group !== 'research');
+const embedIdx = mainBlocks.findIndex((b) => b.embed);
+const beforeEmbed = embedIdx >= 0 ? mainBlocks.slice(0, embedIdx) : mainBlocks;
+const afterEmbed = embedIdx >= 0 ? mainBlocks.slice(embedIdx + 1) : [];
 const researchBlocks = c.blocks.filter((b) => b.group === 'research');
 ---
 <Base lang={lang} title={`${c.title} — ${t.hero.name}`} description={c.subtitle} switchPath={`/cases/${slug}/`}>
@@ -25,7 +28,7 @@ const researchBlocks = c.blocks.filter((b) => b.group === 'research');
       <img class="case-cover" src={img.cover} alt={img.alt[lang]} />
     </header>
     <article class="case-body">
-      {mainBlocks.map((b) => (
+      {beforeEmbed.map((b) => (
         <>
           {b.h && <h2>{b.h}</h2>}
           {b.sub && <h4>{b.sub}</h4>}
@@ -37,10 +40,24 @@ const researchBlocks = c.blocks.filter((b) => b.group === 'research');
       ))}
     </article>
     {img.embed && (
-      <section class="gallery-group" id="user-flow">
-        <h2>{img.embed.title[lang]}</h2>
+      <section class="embed-block" id="embed">
+        {embedIdx < 0 && <h2>{img.embed.title[lang]}</h2>}
         <iframe class="case-embed" src={img.embed.src} title={img.embed.title[lang]} loading="lazy" allowfullscreen></iframe>
       </section>
+    )}
+    {afterEmbed.length > 0 && (
+      <article class="case-body">
+        {afterEmbed.map((b) => (
+          <>
+            {b.h && <h2>{b.h}</h2>}
+            {b.sub && <h4>{b.sub}</h4>}
+            {b.p && b.p.map((x) => <p set:html={x} />)}
+            {b.list && <ul>{b.list.map((x) => <li set:html={x} />)}</ul>}
+            {b.ol && <ol>{b.ol.map((x) => <li set:html={x} />)}</ol>}
+            {b.note && <p class="callout">{b.note}</p>}
+          </>
+        ))}
+      </article>
     )}
     {img.video && (
       <section class="gallery-group" id="video">

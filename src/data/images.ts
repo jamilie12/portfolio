@@ -4,12 +4,13 @@
 const base = '/images/cases';
 const p = (slug: string, files: string[]) => files.map((f) => `${base}/${slug}/${f}`);
 
-export type GroupKey = 'before' | 'after' | 'screens' | 'research';
+export type GroupKey = 'before' | 'after' | 'screens' | 'research' | 'wireframes';
 export const groupTitles: Record<GroupKey, { ru: string; en: string }> = {
   before: { ru: 'До', en: 'Before' },
   after: { ru: 'После', en: 'After' },
   screens: { ru: 'Экраны', en: 'Screens' },
   research: { ru: 'Исследования', en: 'Research' },
+  wireframes: { ru: 'Low fidelity wireframe', en: 'Low fidelity wireframe' },
 };
 
 export const videoTitle = { ru: 'Видео', en: 'Video' };
@@ -48,7 +49,10 @@ export const caseImages: Record<
       src: 'https://embed.figma.com/board/C9WkpvNihDltMOmAaniJgW/Untitled?node-id=0-1&embed-host=share',
       title: { ru: 'User flow', en: 'User flow' },
     },
-    groups: [{ key: 'research', images: p('freedom-academy-1', ['01.png', '02.png', '03.png']) }],
+    groups: [
+      { key: 'research', images: p('freedom-academy-1', ['01.png', '02.png', '03.png']) },
+      { key: 'wireframes', images: p('freedom-academy-1', ['wireframes-lofi.png']) },
+    ],
     alt: { ru: 'Исследование Freedom Academy 1.0', en: 'Freedom Academy 1.0 research' },
   },
   'medtech-app': {

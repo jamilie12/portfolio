@@ -16,15 +16,14 @@ export const videoTitle = { ru: 'Видео', en: 'Video' };
 
 export const caseImages: Record<
   string,
-  { cover: string; video?: string; videoTitle?: { ru: string; en: string }; embed?: { src: string; href: string; title: { ru: string; en: string } }; groups: { key: GroupKey; images: string[] }[]; alt: { ru: string; en: string } }
+  { cover: string; video?: string; videoTitle?: { ru: string; en: string }; embed?: { src: string; title: { ru: string; en: string } }; groups: { key: GroupKey; images: string[] }[]; alt: { ru: string; en: string } }
 > = {
   'website-redesign': {
     cover: `${base}/website-redesign/01.jpg`,
     // FigJam-борд с бенчмарком. Чтобы окно показывалось посетителям, в Figma: Share → «Anyone with the link can view».
     embed: {
       src: 'https://embed.figma.com/board/vLSy1KnwFp314QFiaGaJxY/benchmark---media?node-id=0-1&embed-host=share',
-      href: 'https://www.figma.com/board/vLSy1KnwFp314QFiaGaJxY/benchmark---media?node-id=0-1',
-      title: { ru: 'Бенчмарк: медиа', en: 'Benchmark: media' },
+      title: { ru: 'Бенчмаркинг', en: 'Benchmarking' },
     },
     groups: [
       { key: 'before', images: p('website-redesign', ['02.jpg', '03.jpg']) },
@@ -47,7 +46,6 @@ export const caseImages: Record<
     // FigJam-борд с user flow. Чтобы окно показывалось посетителям, в Figma: Share → «Anyone with the link can view».
     embed: {
       src: 'https://embed.figma.com/board/C9WkpvNihDltMOmAaniJgW/Untitled?node-id=0-1&embed-host=share',
-      href: 'https://www.figma.com/board/C9WkpvNihDltMOmAaniJgW/Untitled?node-id=0-1',
       title: { ru: 'User flow', en: 'User flow' },
     },
     groups: [{ key: 'research', images: p('freedom-academy-1', ['01.png', '02.png', '03.png']) }],

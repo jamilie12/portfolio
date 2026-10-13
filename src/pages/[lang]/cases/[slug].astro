@@ -36,7 +36,6 @@ const next = t.cases[(idx + 1) % t.cases.length];
       <section class="gallery-group" id="user-flow">
         <h2>{img.embed.title[lang]}</h2>
         <iframe class="case-embed" src={img.embed.src} title={img.embed.title[lang]} loading="lazy" allowfullscreen></iframe>
-        <p class="embed-link"><a href={img.embed.href} target="_blank" rel="noopener noreferrer">{lang === 'ru' ? 'Открыть в Figma' : 'Open in Figma'} →</a></p>
       </section>
     )}
     {img.video && (

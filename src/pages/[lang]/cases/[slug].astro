@@ -12,6 +12,8 @@ const idx = t.cases.findIndex((c) => c.slug === slug);
 const c = t.cases[idx];
 const img = caseImages[slug];
 const next = t.cases[(idx + 1) % t.cases.length];
+const mainBlocks = c.blocks.filter((b) => b.group !== 'research');
+const researchBlocks = c.blocks.filter((b) => b.group === 'research');
 ---
 <Base lang={lang} title={`${c.title} — ${t.hero.name}`} description={c.subtitle} switchPath={`/cases/${slug}/`}>
   <div class="wrap">
@@ -23,7 +25,7 @@ const next = t.cases[(idx + 1) % t.cases.length];
       <img class="case-cover" src={img.cover} alt={img.alt[lang]} />
     </header>
     <article class="case-body">
-      {c.blocks.map((b) => (
+      {mainBlocks.map((b) => (
         <>
           {b.h && <h2>{b.h}</h2>}
           {b.p && b.p.map((x) => <p>{x}</p>)}
@@ -47,6 +49,18 @@ const next = t.cases[(idx + 1) % t.cases.length];
     {img.groups.map((g) => (
       <section class="gallery-group" id={g.key}>
         <h2>{groupTitles[g.key][lang]}</h2>
+        {g.key === 'research' && researchBlocks.length > 0 && (
+          <article class="case-body research-body">
+            {researchBlocks.map((b) => (
+              <>
+                {b.h && <h3>{b.h}</h3>}
+                {b.p && b.p.map((x) => <p>{x}</p>)}
+                {b.list && <ul>{b.list.map((x) => <li>{x}</li>)}</ul>}
+                {b.note && <p class="callout">{b.note}</p>}
+              </>
+            ))}
+          </article>
+        )}
         <div class="gallery">
           {g.images.map((src) => <img src={src} alt={`${groupTitles[g.key][lang]} — ${img.alt[lang]}`} loading="lazy" />)}
         </div>

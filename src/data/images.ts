@@ -9,7 +9,7 @@ export const groupTitles: Record<GroupKey, { ru: string; en: string }> = {
   before: { ru: 'До', en: 'Before' },
   after: { ru: 'После', en: 'After' },
   screens: { ru: 'Экраны', en: 'Screens' },
-  research: { ru: 'Исследования', en: 'Research' },
+  research: { ru: 'UX-research (Исследования)', en: 'UX research' },
   wireframes: { ru: 'Low fidelity wireframe', en: 'Low fidelity wireframe' },
   userflow: { ru: 'User flow', en: 'User flow' },
 };
@@ -46,8 +46,8 @@ export const caseImages: Record<
     video: '/videos/freedom-academy-1.mp4',
     videoTitle: { ru: 'Функционал личного кабинета', en: 'Personal account features' },
     groups: [
-      { key: 'userflow', images: p('freedom-academy-1', ['user-flow.png']) },
       { key: 'research', images: p('freedom-academy-1', ['01.png', '02.png', '03.png']) },
+      { key: 'userflow', images: p('freedom-academy-1', ['user-flow.png']) },
       { key: 'wireframes', images: p('freedom-academy-1', ['wireframes-lofi.png']) },
       { key: 'after', images: p('freedom-academy-1', ['after-01.jpg', 'after-02.jpg']) },
     ],

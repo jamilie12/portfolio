@@ -4,7 +4,8 @@
 export type Lang = 'ru' | 'en';
 export const langs: Lang[] = ['ru', 'en'];
 
-type Block = { h?: string; p?: string[]; list?: string[]; note?: string };
+// group: 'research' — блок показывается внутри секции исследований кейса (под её заголовком), а не в основном тексте
+type Block = { h?: string; p?: string[]; list?: string[]; note?: string; group?: 'research' };
 export type Case = {
   slug: string;
   tag: string;
@@ -217,24 +218,27 @@ const allContent: Record<Lang, Content> = {
             ],
           },
           {
+            group: 'research',
             h: 'Research',
             p: [
               'In a benchmarking, I compared our current product with competitors (Skillbox, Tinkoff, Udemy) and highlighted our pros and cons based on the context.',
             ],
           },
           {
+            group: 'research',
             h: 'Interview',
             p: [
               'I interviewed people who have already bought courses and those who have not yet bought. Before the interview, I wrote a script with questions, as well as situations in which I wanted to know how the user would behave.',
             ],
           },
           {
+            group: 'research',
             h: 'Job stories',
             p: [
               'I wrote job stories to understand what motivation users have when they use the product, and what their ultimate goal is.',
             ],
           },
-          { h: 'Information architecture, user flow and prototyping' },
+          { group: 'research', h: 'Information architecture, user flow and prototyping' },
         ],
       },
       {
@@ -563,24 +567,27 @@ const allContent: Record<Lang, Content> = {
             ],
           },
           {
+            group: 'research',
             h: 'Исследование',
             p: [
               'В бенчмаркинге я сравнила наш продукт с конкурентами (Skillbox, Тинькофф, Udemy) и выделила сильные и слабые стороны с учётом контекста.',
             ],
           },
           {
+            group: 'research',
             h: 'Интервью',
             p: [
               'Я провела интервью с теми, кто уже купил курсы, и с теми, кто ещё нет. Перед интервью подготовила сценарий вопросов и ситуаций, в которых хотела понять поведение пользователя.',
             ],
           },
           {
+            group: 'research',
             h: 'Job stories',
             p: [
               'Я составила job stories, чтобы понять мотивацию пользователей и их конечную цель при работе с продуктом.',
             ],
           },
-          { h: 'Информационная архитектура, user flow и прототипирование' },
+          { group: 'research', h: 'Информационная архитектура, user flow и прототипирование' },
         ],
       },
       {

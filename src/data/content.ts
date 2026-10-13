@@ -219,7 +219,7 @@ const allContent: Record<Lang, Content> = {
           },
           {
             group: 'research',
-            h: 'Research',
+            h: 'Benchmarking',
             p: [
               'In a benchmarking, I compared our current product with competitors (Skillbox, Tinkoff, Udemy) and highlighted our pros and cons based on the context.',
             ],
@@ -568,7 +568,7 @@ const allContent: Record<Lang, Content> = {
           },
           {
             group: 'research',
-            h: 'Исследование',
+            h: 'Бенчмаркинг',
             p: [
               'В бенчмаркинге я сравнила наш продукт с конкурентами (Skillbox, Тинькофф, Udemy) и выделила сильные и слабые стороны с учётом контекста.',
             ],

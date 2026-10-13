@@ -9,7 +9,7 @@ export const groupTitles: Record<GroupKey, { ru: string; en: string }> = {
   before: { ru: 'До', en: 'Before' },
   after: { ru: 'После', en: 'After' },
   screens: { ru: 'Экраны', en: 'Screens' },
-  research: { ru: 'UX-research (Исследования)', en: 'UX research' },
+  research: { ru: 'UX-research', en: 'UX-research' },
   wireframes: { ru: 'Low fidelity wireframe', en: 'Low fidelity wireframe' },
   userflow: { ru: 'User flow', en: 'User flow' },
 };

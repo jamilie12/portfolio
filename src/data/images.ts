@@ -40,8 +40,8 @@ export const caseImages: Record<
     videoTitle: { ru: 'Функционал личного кабинета', en: 'Personal account features' },
     // FigJam-борд с user flow. Чтобы окно показывалось посетителям, в Figma: Share → «Anyone with the link can view».
     embed: {
-      src: 'https://embed.figma.com/board/BOLJ3WQhbYQtYBeexVl3On/User-flow--Freedom-Academy--%D0%BF%D0%BE-%D1%80%D0%B5%D1%84%D0%B5%D1%80%D0%B5%D0%BD%D1%81%D1%83-DD-16-?node-id=0-1&embed-host=share',
-      href: 'https://www.figma.com/board/BOLJ3WQhbYQtYBeexVl3On/User-flow--Freedom-Academy--%D0%BF%D0%BE-%D1%80%D0%B5%D1%84%D0%B5%D1%80%D0%B5%D0%BD%D1%81%D1%83-DD-16-?node-id=0-1',
+      src: 'https://embed.figma.com/board/C9WkpvNihDltMOmAaniJgW/Untitled?node-id=0-1&embed-host=share',
+      href: 'https://www.figma.com/board/C9WkpvNihDltMOmAaniJgW/Untitled?node-id=0-1',
       title: { ru: 'User flow', en: 'User flow' },
     },
     groups: [{ key: 'research', images: p('freedom-academy-1', ['01.png', '02.png', '03.png']) }],

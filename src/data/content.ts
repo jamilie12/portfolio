@@ -128,6 +128,39 @@ const allContent: Record<Lang, Content> = {
             note: 'The goal: create a clearer content structure and navigation system that would help users quickly understand what the platform offers and naturally continue exploring.',
           },
           {
+            h: 'Benchmarking',
+            p: [
+              'In the benchmarking, I compared our product with competitors and highlighted strengths and weaknesses based on the context.',
+            ],
+          },
+          {
+            sub: 'Goal',
+            p: [
+              'Create a functional internal media product with well-thought-out navigation, a clear visual style and mobile optimization, taking into account the strengths and mistakes of key competitors. Main competitors: Yandex Dzen, <a href="https://vc.ru" target="_blank" rel="noopener noreferrer">vc.ru</a>. Additional: <a href="https://research.ffin.ru" target="_blank" rel="noopener noreferrer">research.ffin.ru</a>, <a href="https://atom.finance" target="_blank" rel="noopener noreferrer">atom.finance</a>, <a href="https://open-broker.ru/analytics" target="_blank" rel="noopener noreferrer">open-broker.ru/analytics</a>.',
+            ],
+          },
+          {
+            sub: 'Key findings',
+            ol: [
+              '<strong>Overall winner: Yandex Dzen.</strong> More modern, friendlier and better adapted to mobile. <a href="https://vc.ru" target="_blank" rel="noopener noreferrer">vc.ru</a> is stable and clear, but looks outdated.',
+              '<strong>Functionality.</strong> Short articles can be read right in the feed; comments and search work without losing context. Search shows 5 relevant results with a link to all of them, but the “go to results” icon is slightly confusing.',
+              '<strong>Navigation.</strong> Dzen: fixed sidebar, login and search in the header, infinite-scroll content, navigation always at hand. <a href="https://vc.ru" target="_blank" rel="noopener noreferrer">vc.ru</a>: fixed content width, the menu can be collapsed into a burger (less distracting, but one extra click to other pages).',
+              '<strong>Visuals.</strong> Dzen: minimalism, rounded corners, card-based layout, focus on content, one consistent style even for ads, image placeholders in the color palette. Weak spot: highlighted feed elements sometimes blend into the background.',
+              '<strong>Content.</strong> Dzen splits content into videos, short videos, articles, news, photos and collections. <a href="https://vc.ru" target="_blank" rel="noopener noreferrer">vc.ru</a>: articles, news, announcements, events, photos, videos.',
+              '<strong>Mobile version.</strong> Dzen: bottom menu like in an app, bottom sheets, full-screen search, flat design, 32 px icons. <a href="https://vc.ru" target="_blank" rel="noopener noreferrer">vc.ru</a>: dropdowns as on desktop, a burger, unclear icons, buttons at the top of the screen. Users spend more time on their phones, so the interface should be designed for the thumb and the bottom of the screen.',
+            ],
+          },
+          {
+            sub: 'What we took into the product',
+            list: [
+              'A fixed navigation with an infinite feed (as in Dzen), but with the option to hide the menu (as in <a href="https://vc.ru" target="_blank" rel="noopener noreferrer">vc.ru</a>).',
+              'A rounded, card-based, calm style with focus on content.',
+              'A mobile version built like an app: bottom menu, bottom sheets, full-screen search, large icons.',
+              'Short materials shown in the feed in full; filters and sorting kept on one page.',
+            ],
+          },
+          { embed: true },
+          {
             h: 'My approach',
             p: [
               'I focused on restructuring the media experience around the user’s need to discover, consume and continue exploring content.',

@@ -18,7 +18,7 @@ export type Case = {
 type Content = {
   meta: { title: string; description: string };
   nav: { about: string; experience: string; cases: string; contacts: string };
-  hero: { name: string; role: string; line: string; markWord: string; ctaCases: string; ctaContact: string };
+  hero: { name: string; role: string; line: string; markWord: string; ctaCases: string; ctaContact: string; ctaCv: string };
   about: { title: string; p: string[]; skillsTitle: string; skills: string[]; toolsTitle: string; tools: string[] };
   experience: {
     title: string;
@@ -50,6 +50,7 @@ const allContent: Record<Lang, Content> = {
       markWord: 'clear',
       ctaCases: 'View cases',
       ctaContact: 'Contact me',
+      ctaCv: 'Download CV',
     },
     about: {
       title: 'About me',
@@ -395,6 +396,7 @@ const allContent: Record<Lang, Content> = {
       markWord: 'понятные',
       ctaCases: 'Смотреть кейсы',
       ctaContact: 'Связаться',
+      ctaCv: 'Скачать CV',
     },
     about: {
       title: 'Обо мне',

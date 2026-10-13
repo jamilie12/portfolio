@@ -36,7 +36,7 @@ export const caseImages: Record<
     cover: `${base}/freedom-academy-2/01.jpg`,
     groups: [
       { key: 'before', images: p('freedom-academy-2', ['02.jpg', '06.jpg']) },
-      { key: 'after', images: p('freedom-academy-2', ['03.jpg', '04.jpg', '05.jpg', '07.jpg', '08.jpg']) },
+      { key: 'after', images: p('freedom-academy-2', ['03.jpg', '04.jpg', '05.jpg', '07.jpg']) },
     ],
     alt: { ru: 'Экраны Freedom Academy 2.0', en: 'Freedom Academy 2.0 screens' },
   },
@@ -52,6 +52,7 @@ export const caseImages: Record<
     groups: [
       { key: 'research', images: p('freedom-academy-1', ['01.png', '02.png', '03.png']) },
       { key: 'wireframes', images: p('freedom-academy-1', ['wireframes-lofi.png']) },
+      { key: 'after', images: p('freedom-academy-1', ['after-01.jpg', 'after-02.jpg']) },
     ],
     alt: { ru: 'Исследование Freedom Academy 1.0', en: 'Freedom Academy 1.0 research' },
   },

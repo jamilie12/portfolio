@@ -22,11 +22,6 @@ export const caseImages: Record<
 > = {
   'website-redesign': {
     cover: `${base}/website-redesign/01.jpg`,
-    // FigJam-борд с бенчмарком. Чтобы окно показывалось посетителям, в Figma: Share → «Anyone with the link can view».
-    embed: {
-      src: 'https://embed.figma.com/board/vLSy1KnwFp314QFiaGaJxY/benchmark---media?node-id=0-1&embed-host=share',
-      title: { ru: 'Бенчмаркинг', en: 'Benchmarking' },
-    },
     groups: [
       { key: 'before', images: p('website-redesign', ['02.jpg', '03.jpg']) },
       { key: 'after', images: p('website-redesign', ['04.jpg', '05.jpg', '06.jpg']) },

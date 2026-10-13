@@ -159,7 +159,6 @@ const allContent: Record<Lang, Content> = {
               'Short materials shown in the feed in full; filters and sorting kept on one page.',
             ],
           },
-          { embed: true },
           {
             h: 'My approach',
             p: [
@@ -541,7 +540,6 @@ const allContent: Record<Lang, Content> = {
               'Короткие материалы показывать в ленте целиком, фильтры и сортировку держать на одной странице.',
             ],
           },
-          { embed: true },
           {
             h: 'Подход',
             p: [

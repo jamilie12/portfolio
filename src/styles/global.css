@@ -96,6 +96,9 @@ h3.small { font-size: 14px; letter-spacing: .06em; text-transform: uppercase; co
 .case-body h2 { font-size: clamp(26px, 3.2vw, 36px); margin: 56px 0 16px; }
 .research-body { margin-bottom: 40px; }
 .research-body h3 { font-size: clamp(20px, 2.4vw, 26px); margin: 32px 0 12px; }
+.case-body h4 { font-size: 18px; letter-spacing: .02em; margin: 28px 0 10px; }
+.case-body ol { padding-left: 1.3em; }
+.case-body ol li { margin-bottom: 10px; }
 .case-body ul { padding-left: 1.1em; }
 .case-body li { margin-bottom: 8px; }
 .callout { border-left: 0; background: var(--soft); border-radius: 14px; padding: 18px 22px; margin-top: 20px; font-weight: 600; }

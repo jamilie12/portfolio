@@ -28,8 +28,10 @@ const researchBlocks = c.blocks.filter((b) => b.group === 'research');
       {mainBlocks.map((b) => (
         <>
           {b.h && <h2>{b.h}</h2>}
-          {b.p && b.p.map((x) => <p>{x}</p>)}
-          {b.list && <ul>{b.list.map((x) => <li>{x}</li>)}</ul>}
+          {b.sub && <h4>{b.sub}</h4>}
+          {b.p && b.p.map((x) => <p set:html={x} />)}
+          {b.list && <ul>{b.list.map((x) => <li set:html={x} />)}</ul>}
+          {b.ol && <ol>{b.ol.map((x) => <li set:html={x} />)}</ol>}
           {b.note && <p class="callout">{b.note}</p>}
         </>
       ))}
@@ -54,8 +56,10 @@ const researchBlocks = c.blocks.filter((b) => b.group === 'research');
             {researchBlocks.map((b) => (
               <>
                 {b.h && <h3>{b.h}</h3>}
-                {b.p && b.p.map((x) => <p>{x}</p>)}
-                {b.list && <ul>{b.list.map((x) => <li>{x}</li>)}</ul>}
+                {b.sub && <h4>{b.sub}</h4>}
+                {b.p && b.p.map((x) => <p set:html={x} />)}
+                {b.list && <ul>{b.list.map((x) => <li set:html={x} />)}</ul>}
+                {b.ol && <ol>{b.ol.map((x) => <li set:html={x} />)}</ol>}
                 {b.note && <p class="callout">{b.note}</p>}
               </>
             ))}

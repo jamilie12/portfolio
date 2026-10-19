@@ -31,6 +31,7 @@ export const caseImages: Record<
   'freedom-academy-2': {
     cover: `${base}/freedom-academy-2/01.jpg`,
     groups: [
+      { key: 'userflow', images: p('freedom-academy-2', ['user-flow.png']) },
       { key: 'before', images: p('freedom-academy-2', ['02.jpg', '06.jpg']) },
       { key: 'after', images: p('freedom-academy-2', ['03.jpg', '04.jpg', '05.jpg', '07.jpg']) },
     ],

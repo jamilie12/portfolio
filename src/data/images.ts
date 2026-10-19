@@ -53,6 +53,11 @@ export const caseImages: Record<
     groups: [{ key: 'screens', images: p('medtech-app', ['02.jpg', '03.jpg']) }],
     alt: { ru: 'Экраны MedTech-приложения', en: 'MedTech app screens' },
   },
+  prodengi: {
+    cover: `${base}/prodengi/cover.jpg`,
+    groups: [{ key: 'userflow', images: p('prodengi', ['user-flow.png']) }],
+    alt: { ru: 'Prodengi.kz: user flow', en: 'Prodengi.kz: user flow' },
+  },
   'flower-delivery-research': {
     cover: `${base}/flower-research/01.jpg`,
     groups: [{ key: 'research', images: p('flower-research', ['02.jpg', '03.jpg', '04.jpg', '05.jpg', '06.jpg', '07.jpg', '08.jpg', '09.jpg']) }],

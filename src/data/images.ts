@@ -43,7 +43,6 @@ export const caseImages: Record<
     videoTitle: { ru: 'Функционал личного кабинета', en: 'Personal account features' },
     groups: [
       { key: 'research', images: p('freedom-academy-1', ['01.png', '02.png', '03.png']) },
-      { key: 'userflow', images: p('freedom-academy-1', ['user-flow.png']) },
       { key: 'wireframes', images: p('freedom-academy-1', ['wireframes-lofi.png']) },
       { key: 'after', images: p('freedom-academy-1', ['after-01.jpg', 'after-02.jpg']) },
     ],

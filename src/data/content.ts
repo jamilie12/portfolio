@@ -346,7 +346,7 @@ const allContent: Record<Lang, Content> = {
             list: [
               '<strong>Demographics:</strong> age 33–55+, low-to-middle income, limited experience with complex mobile apps or fintech terms.',
               '<strong>Context:</strong> they have already been rejected by traditional banks (Kaspi, Halyk, etc.) due to credit scores or income levels.',
-              '<strong>Psychological state:</strong> high anxiety, fear of being scammed, and frustration with complex interfaces.',
+              '<strong>Psychological state:</strong> fear of being scammed and frustration with complex interfaces.',
             ],
           },
           {
@@ -792,7 +792,7 @@ const allContent: Record<Lang, Content> = {
             list: [
               '<strong>Демография:</strong> 33–55+ лет, низкий и средний доход, ограниченный опыт со сложными мобильными приложениями и финтех-терминами.',
               '<strong>Контекст:</strong> им уже отказали традиционные банки (Kaspi, Halyk и др.) из-за кредитной истории или уровня дохода.',
-              '<strong>Психологическое состояние:</strong> высокая тревога, страх мошенничества и раздражение от сложных интерфейсов.',
+              '<strong>Психологическое состояние:</strong> страх мошенничества и раздражение от сложных интерфейсов.',
             ],
           },
           {

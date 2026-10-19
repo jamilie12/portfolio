@@ -74,7 +74,7 @@ const allContent: Record<Lang, Content> = {
     experience: {
       title: 'Experience',
       items: [
-        { company: 'Freedom Broker', field: 'Investment company', role: 'UX/UI Designer', period: 'August 2024 – Present' },
+        { company: 'Freedom Broker', field: 'Investment company', role: 'Senior UX/UI Designer', period: 'August 2024 – Present' },
         { company: 'Prodengi.kz', field: 'Financial marketplace', role: 'UX/UI Designer', period: 'July 2022 – 2024' },
         { company: 'Freelance', field: 'Mobile apps · Websites · Landings', role: 'UX/UI Designer', period: '2020 – 2022' },
       ],
@@ -455,7 +455,7 @@ const allContent: Record<Lang, Content> = {
     experience: {
       title: 'Опыт работы',
       items: [
-        { company: 'Freedom Broker', field: 'Инвестиционная компания', role: 'UX/UI дизайнер', period: 'август 2024 — настоящее время' },
+        { company: 'Freedom Broker', field: 'Инвестиционная компания', role: 'Senior UX/UI дизайнер', period: 'август 2024 — настоящее время' },
         { company: 'Prodengi.kz', field: 'Финансовый маркетплейс', role: 'UX/UI дизайнер', period: 'июль 2022 — 2024' },
         { company: 'Фриланс', field: 'Мобильные приложения · сайты · лендинги', role: 'UX/UI дизайнер', period: '2020 — 2022' },
       ],

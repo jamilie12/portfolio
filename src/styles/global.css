@@ -89,6 +89,8 @@ h3.small { font-size: 14px; letter-spacing: .06em; text-transform: uppercase; co
 .gallery-group { padding: 64px 0 0; }
 .gallery-group h2 { font-size: clamp(26px, 3.2vw, 36px); margin-bottom: 24px; }
 .gallery { display: grid; gap: 24px; }
+.case-figure { margin: 40px 0 0; }
+.case-figure img { display: block; width: 100%; height: auto; border-radius: var(--radius); border: 1px solid var(--line); background: var(--soft); }
 .embed-block { padding: 40px 0 0; }
 .embed-block h2 { font-size: clamp(26px, 3.2vw, 36px); margin-bottom: 24px; }
 .case-embed { display: block; width: 100%; height: min(78vh, 720px); border: 1px solid var(--line); border-radius: var(--radius); background: var(--soft); }

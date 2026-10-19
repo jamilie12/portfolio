@@ -5,8 +5,8 @@ export type Lang = 'ru' | 'en';
 export const langs: Lang[] = ['ru', 'en'];
 
 // group: 'research' — блок показывается внутри секции исследований кейса (под её заголовком), а не в основном тексте
-// embed: true — на месте блока показывается окно Figma кейса. sub — подзаголовок внутри блока (h4), ol — нумерованный список. В p/list/ol допустим простой HTML (ссылки, <strong>).
-type Block = { h?: string; sub?: string; p?: string[]; list?: string[]; ol?: string[]; note?: string; group?: 'research'; embed?: boolean };
+// embed: true — на месте блока показывается окно Figma кейса; image — на месте блока показывается картинка на всю ширину. sub — подзаголовок внутри блока (h4), ol — нумерованный список. В p/list/ol допустим простой HTML (ссылки, <strong>).
+type Block = { h?: string; sub?: string; p?: string[]; list?: string[]; ol?: string[]; note?: string; group?: 'research'; embed?: boolean; image?: string };
 export type Case = {
   slug: string;
   tag: string;
@@ -159,6 +159,7 @@ const allContent: Record<Lang, Content> = {
               'Short materials shown in the feed in full; filters and sorting kept on one page.',
             ],
           },
+          { image: '/images/cases/website-redesign/benchmark.webp' },
           {
             h: 'My approach',
             p: [
@@ -540,6 +541,7 @@ const allContent: Record<Lang, Content> = {
               'Короткие материалы показывать в ленте целиком, фильтры и сортировку держать на одной странице.',
             ],
           },
+          { image: '/images/cases/website-redesign/benchmark.webp' },
           {
             h: 'Подход',
             p: [

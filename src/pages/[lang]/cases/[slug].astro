@@ -13,7 +13,8 @@ const c = t.cases[idx];
 const img = caseImages[slug];
 const next = t.cases[(idx + 1) % t.cases.length];
 const mainBlocks = c.blocks.filter((b) => b.group !== 'research');
-const embedIdx = mainBlocks.findIndex((b) => b.embed);
+const embedIdx = mainBlocks.findIndex((b) => b.embed || b.image);
+const marker = embedIdx >= 0 ? mainBlocks[embedIdx] : null;
 const beforeEmbed = embedIdx >= 0 ? mainBlocks.slice(0, embedIdx) : mainBlocks;
 const afterEmbed = embedIdx >= 0 ? mainBlocks.slice(embedIdx + 1) : [];
 const researchBlocks = c.blocks.filter((b) => b.group === 'research');
@@ -39,7 +40,12 @@ const researchBlocks = c.blocks.filter((b) => b.group === 'research');
         </>
       ))}
     </article>
-    {img.embed && (
+    {marker?.image && (
+      <figure class="case-figure">
+        <img src={marker.image} alt={`${c.title} — benchmark`} loading="lazy" />
+      </figure>
+    )}
+    {img.embed && !marker?.image && (
       <section class="embed-block" id="embed">
         {embedIdx < 0 && <h2>{img.embed.title[lang]}</h2>}
         <iframe class="case-embed" src={img.embed.src} title={img.embed.title[lang]} loading="lazy" allowfullscreen></iframe>

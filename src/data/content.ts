@@ -344,7 +344,7 @@ const allContent: Record<Lang, Content> = {
             sub: 'User persona: the “last hope” borrower',
             list: [
               '<strong>Demographics:</strong> age 33–55+, low-to-middle income, limited experience with complex mobile apps or fintech terms.',
-              '<strong>Context:</strong> they have already been rejected by traditional banks (Kaspi, Halyk, etc.) due to credit scores or income levels. They feel “pushed” into the MFO market and are often overwhelmed by the number of choices and fine print.',
+              '<strong>Context:</strong> they have already been rejected by traditional banks (Kaspi, Halyk, etc.) due to credit scores or income levels.',
               '<strong>Psychological state:</strong> high anxiety, fear of being scammed, and frustration with complex interfaces.',
             ],
           },
@@ -789,7 +789,7 @@ const allContent: Record<Lang, Content> = {
             sub: 'Персона: заёмщик «последней надежды»',
             list: [
               '<strong>Демография:</strong> 33–55+ лет, низкий и средний доход, ограниченный опыт со сложными мобильными приложениями и финтех-терминами.',
-              '<strong>Контекст:</strong> им уже отказали традиционные банки (Kaspi, Halyk и др.) из-за кредитной истории или уровня дохода. Они чувствуют, что их «вытолкнули» на рынок МФО, и теряются от количества вариантов и мелкого шрифта.',
+              '<strong>Контекст:</strong> им уже отказали традиционные банки (Kaspi, Halyk и др.) из-за кредитной истории или уровня дохода.',
               '<strong>Психологическое состояние:</strong> высокая тревога, страх мошенничества и раздражение от сложных интерфейсов.',
             ],
           },

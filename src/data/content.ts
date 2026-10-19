@@ -352,7 +352,7 @@ const allContent: Record<Lang, Content> = {
           {
             h: 'My approach',
             p: [
-              'The goal was to reduce cognitive load. We moved away from “fintech-chic” toward a high-contrast, status-first interface and replaced complex financial jargon with clear status blocks and color-coded pathways, so that even a user with no technical background could get through a loan application.',
+              'The goal was to reduce cognitive load. We simplified the application and sign-in steps and showed a personal account that gathers all the useful information, with the right accents in place. Responses from banks and MFOs are separated by review status, online and offline application is clearly highlighted, and the client’s rating is shown as a “tonometer”-style gauge.',
             ],
           },
           {
@@ -798,7 +798,7 @@ const allContent: Record<Lang, Content> = {
           {
             h: 'Подход',
             p: [
-              'Цель — снизить когнитивную нагрузку. Мы ушли от «финтех-шика» к контрастному интерфейсу, где на первом месте статус, и заменили сложный финансовый жаргон понятными блоками статусов и цветовыми путями, чтобы даже человек без технического опыта мог пройти оформление займа.',
+              'Цель — снизить когнитивную нагрузку. Мы упростили шаги заявки и авторизации, показали личный кабинет, где собрана вся полезная информация, и расставили правильные акценты. Ответы банков и МФО разделили по статусу рассмотрения, акцентировали внимание на онлайн- и офлайн-оформлении, а рейтинг клиента показали в виде «тонометра».',
             ],
           },
           {

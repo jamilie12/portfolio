@@ -335,9 +335,10 @@ const allContent: Record<Lang, Content> = {
             ],
           },
           {
-            h: 'Research',
+            h: 'Audience',
             p: [
-              'A key discovery during qualitative in-depth interviews was that our core audience felt “digitally excluded” by complex banking apps. They came to us after being rejected by banks, carrying high emotional stress.',
+              'According to the analytics, our core audience is people with low computer literacy. Most users dropped off at the stage of submitting an application.',
+              'So the site had to be clear at first glance, and the application flow as simple as possible.',
             ],
           },
           {
@@ -357,7 +358,7 @@ const allContent: Record<Lang, Content> = {
           {
             h: 'What I did',
             list: [
-              '<strong>Built the user journey.</strong> I went through the whole path from submitting an application to receiving the money and simplified the steps where people got lost. I split the application form into 3 steps instead of one long form, so we do not scare off potential customers.',
+              '<strong>Built the user journey.</strong> I went through the whole path from submitting an application to receiving the money and simplified the steps where people got lost. Analytics showed that users dropped off when submitting an application, so I split the form into 3 steps instead of one long form, so we do not scare off potential customers.',
               '<strong>Split applications into segments.</strong> All offers are now linked to a specific client request, so the user sees only the options related to it.',
               '<strong>Simplified the interface.</strong> I used accents only where they matter, hid detailed information in tooltips and split the information into separate blocks.',
               '<strong>Made the mobile version more intuitive.</strong> Users can collapse all of a financial organization’s offers under one application, long information is moved into tooltips, accents are rebalanced and a bottom navigation is added.',
@@ -780,9 +781,10 @@ const allContent: Record<Lang, Content> = {
             ],
           },
           {
-            h: 'Исследование',
+            h: 'Аудитория',
             p: [
-              'Главное открытие качественных глубинных интервью: основная аудитория чувствовала себя «цифрово исключённой» из-за сложных банковских приложений. К нам приходили после отказов в банках, в состоянии сильного эмоционального стресса.',
+              'По данным аналитики, основная аудитория сервиса — люди с невысокой компьютерной грамотностью. Больше всего пользователей мы теряли на этапе отправки заявки.',
+              'Поэтому сайт нужно было сделать понятным с первого взгляда, а путь подачи заявки — максимально простым.',
             ],
           },
           {
@@ -802,7 +804,7 @@ const allContent: Record<Lang, Content> = {
           {
             h: 'Что я сделала',
             list: [
-              '<strong>Выстроила пользовательский путь.</strong> Прошла путь от подачи заявки до получения денег и упростила шаги, на которых люди терялись. Разделила форму подачи заявки на 3 шага вместо одной длинной формы, чтобы не спугнуть потенциальных клиентов.',
+              '<strong>Выстроила пользовательский путь.</strong> Прошла путь от подачи заявки до получения денег и упростила шаги, на которых люди терялись. Аналитика показала, что пользователи уходили на этапе отправки заявки, поэтому я разделила форму на 3 шага вместо одной длинной, чтобы не спугнуть потенциальных клиентов.',
               '<strong>Разделила заявки на сегменты.</strong> Все предложения теперь привязаны к конкретной заявке клиента, поэтому он видит только варианты по своему запросу.',
               '<strong>Упростила интерфейс.</strong> Использовала акценты только там, где они уместны, спрятала подробную информацию в тултипы и разделила всё на отдельные блоки.',
               '<strong>Сделала мобильную версию интуитивнее.</strong> Добавила возможность скрыть все предложения финансовой организации под одной заявкой, убрала длинную информацию в тултипы, расставила акценты и добавила нижнюю навигацию.',

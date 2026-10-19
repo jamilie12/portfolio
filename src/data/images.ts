@@ -55,7 +55,10 @@ export const caseImages: Record<
   },
   prodengi: {
     cover: `${base}/prodengi/cover.jpg`,
-    groups: [{ key: 'userflow', images: p('prodengi', ['user-flow.png']) }],
+    groups: [
+      { key: 'userflow', images: p('prodengi', ['user-flow.png']) },
+      { key: 'screens', images: p('prodengi', ['desktop.jpg', 'mobile.jpg']) },
+    ],
     alt: { ru: 'Prodengi.kz: user flow', en: 'Prodengi.kz: user flow' },
   },
   'flower-delivery-research': {

@@ -315,21 +315,23 @@ const allContent: Record<Lang, Content> = {
         slug: 'prodengi',
         tag: 'Prodengi.kz · Fintech',
         title: 'Prodengi.kz',
-        subtitle: 'Financial marketplace connecting users with microfinance organizations and banking products: a personal account with clear loan application statuses.',
+        subtitle: 'Personal account redesign for a financial marketplace: clear application statuses, less visual noise and a more intuitive mobile version.',
         blocks: [
           {
             h: 'Overview',
             p: [
-              'Prodengi.kz is a financial marketplace that connects thousands of users with microfinance organizations and banking products. It is integrated with ecosystem services (e.g., Jetu, TengeDa), and the interface is designed for high-conversion financial funnels.',
+              'Prodengi.kz is a financial marketplace that connects thousands of users with microfinance organizations and banking products, integrated with ecosystem services (e.g., Jetu, TengeDa).',
+              'I designed the user journey and redesigned the personal account: I split the user’s applications into segments, made the mobile version more intuitive and added convenient navigation.',
             ],
           },
           {
             h: 'The challenge',
-            p: ['Previously, information on submitted microloan applications was fragmented, and users were confused by their statuses.'],
+            p: ['Information was scattered across the personal account, and the interface had UI mistakes that made it hard to understand what was going on with an application.'],
             list: [
+              '<strong>Visual noise:</strong> accents were used everywhere (banner, status, applications), so users got lost and could not tell what mattered.',
               '<strong>Lack of focus:</strong> users could not tell which organizations had approved their loans, which applications were under review, and which offers were simply promotional recommendations.',
-              '<strong>Mixed applications:</strong> if a customer submitted several applications, offers from different organizations were mixed together, creating informational noise.',
-              '<strong>Format confusion:</strong> the forms did not clearly distinguish between online applications and the need to be physically present in the office.',
+              '<strong>Mixed applications:</strong> if a customer submitted several applications, offers from different organizations were mixed together.',
+              '<strong>Format confusion:</strong> the forms did not clearly distinguish between online applications and the need to visit an office.',
             ],
           },
           {
@@ -349,22 +351,23 @@ const allContent: Record<Lang, Content> = {
           {
             h: 'My approach',
             p: [
-              'The design goal was to reduce cognitive load. We moved away from “fintech-chic” toward a high-contrast, status-first interface and replaced complex financial jargon with clear status blocks and color-coded pathways, so that even a user with zero technical background could navigate a loan application.',
+              'The goal was to reduce cognitive load. We moved away from “fintech-chic” toward a high-contrast, status-first interface and replaced complex financial jargon with clear status blocks and color-coded pathways, so that even a user with no technical background could get through a loan application.',
             ],
           },
           {
-            h: 'Key solutions',
+            h: 'What I did',
             list: [
-              '<strong>Personalized dashboard</strong> — a personal account where users track the real-time status of their loan applications. Data is organized into logical clusters, which improves transparency when several financial offers are open at once.',
-              '<strong>Smart selection system</strong> — filtering by loan amount, term and delivery method (online / offline) helps users quickly find products that match their credit profile.',
-              '<strong>Status hierarchy and clarity</strong> — a visual “traffic light” system and clear job statements in the UI help users instantly distinguish guaranteed approvals, pending reviews and ecosystem recommendations, reducing the “anxiety” force identified in the research.',
+              '<strong>Built the user journey.</strong> I went through the whole path from submitting an application to receiving the money and simplified the steps where people got lost. I split the application form into 3 steps instead of one long form, so we do not scare off potential customers.',
+              '<strong>Split applications into segments.</strong> All offers are now linked to a specific client request, so the user sees only the options related to it.',
+              '<strong>Simplified the interface.</strong> I used accents only where they matter, hid detailed information in tooltips and split the information into separate blocks.',
+              '<strong>Made the mobile version more intuitive.</strong> Users can collapse all of a financial organization’s offers under one application, long information is moved into tooltips, accents are rebalanced and a bottom navigation is added.',
+              '<strong>Added convenient navigation</strong> across the personal account.',
             ],
           },
           {
             h: 'The result',
-            p: ['We redesigned the personal account architecture with strict logic and a visual hierarchy:'],
+            p: ['The personal account now has a strict logic and a visual hierarchy:'],
             list: [
-              '<strong>Contextual grouping:</strong> all offers are linked to a specific client request, so the user sees only the options related to the current request.',
               '<strong>Color-coded statuses:</strong> green (“Approved”) for ready-made solutions, blue (“Most suitable”) for our recommendations, gray (“Denied”) for processed requests, purple (“Services for you”) for cross-products within the ecosystem (e.g., Jetu for debt restructuring).',
               '<strong>Process transparency:</strong> an Online or Offline marker in each card, so the user knows in advance how they will receive the money.',
             ],
@@ -757,20 +760,22 @@ const allContent: Record<Lang, Content> = {
         slug: 'prodengi',
         tag: 'Prodengi.kz · Финтех',
         title: 'Prodengi.kz',
-        subtitle: 'Финансовый маркетплейс, объединяющий пользователей с микрофинансовыми организациями и банковскими продуктами: личный кабинет с понятными статусами заявок.',
+        subtitle: 'Редизайн личного кабинета финансового маркетплейса: понятные статусы заявок, меньше визуального шума и более интуитивная мобильная версия.',
         blocks: [
           {
             h: 'Обзор',
             p: [
-              'Prodengi.kz — финансовый маркетплейс, который соединяет тысячи пользователей с микрофинансовыми организациями и банковскими продуктами. Он интегрирован с сервисами экосистемы (например, Jetu, TengeDa), а интерфейс рассчитан на воронки с высокой конверсией.',
+              'Prodengi.kz — финансовый маркетплейс, который соединяет тысячи пользователей с микрофинансовыми организациями и банковскими продуктами и интегрирован с сервисами экосистемы (например, Jetu, TengeDa).',
+              'Я выстраивала пользовательский путь и редизайнила личный кабинет: разделила заявки пользователя на сегменты, сделала мобильную версию более интуитивной и добавила удобную навигацию.',
             ],
           },
           {
             h: 'Задача',
-            p: ['Раньше информация об отправленных заявках на микрозаймы была разрозненной, и пользователи путались в статусах.'],
+            p: ['Информация в личном кабинете была разбросана, а ошибки интерфейса мешали понять, что происходит с заявкой.'],
             list: [
+              '<strong>Визуальный шум:</strong> акценты стояли повсюду (на баннере, статусе, заявках), поэтому пользователи терялись и не понимали, что важно.',
               '<strong>Нет фокуса:</strong> пользователь не понимал, какие организации одобрили заём, какие заявки на рассмотрении, а какие предложения просто рекламные рекомендации.',
-              '<strong>Смешение заявок:</strong> если клиент подавал несколько заявок, предложения разных организаций смешивались и создавали информационный шум.',
+              '<strong>Смешение заявок:</strong> если клиент подавал несколько заявок, предложения разных организаций смешивались.',
               '<strong>Путаница в формате:</strong> формы не показывали, что можно оформить онлайн, а где нужно прийти в офис.',
             ],
           },
@@ -791,22 +796,23 @@ const allContent: Record<Lang, Content> = {
           {
             h: 'Подход',
             p: [
-              'Цель дизайна — снизить когнитивную нагрузку. Мы ушли от «финтех-шика» к контрастному интерфейсу, где на первом месте статус, и заменили сложный финансовый жаргон понятными блоками статусов и цветовыми путями, чтобы даже человек без технического опыта мог пройти оформление займа.',
+              'Цель — снизить когнитивную нагрузку. Мы ушли от «финтех-шика» к контрастному интерфейсу, где на первом месте статус, и заменили сложный финансовый жаргон понятными блоками статусов и цветовыми путями, чтобы даже человек без технического опыта мог пройти оформление займа.',
             ],
           },
           {
-            h: 'Ключевые решения',
+            h: 'Что я сделала',
             list: [
-              '<strong>Персональный дашборд</strong> — личный кабинет, где статус заявок виден в реальном времени. Данные собраны в логические кластеры, что повышает прозрачность, когда открыто сразу несколько предложений.',
-              '<strong>Умный подбор</strong> — фильтры по сумме, сроку и способу получения (онлайн / офлайн) помогают быстро найти продукты под кредитный профиль.',
-              '<strong>Иерархия статусов и ясность</strong> — визуальный «светофор» и понятные job statements в интерфейсе помогают сразу отличить гарантированные одобрения, заявки на рассмотрении и рекомендации экосистемы, снижая силу «тревоги», найденную в исследовании.',
+              '<strong>Выстроила пользовательский путь.</strong> Прошла путь от подачи заявки до получения денег и упростила шаги, на которых люди терялись. Разделила форму подачи заявки на 3 шага вместо одной длинной формы, чтобы не спугнуть потенциальных клиентов.',
+              '<strong>Разделила заявки на сегменты.</strong> Все предложения теперь привязаны к конкретной заявке клиента, поэтому он видит только варианты по своему запросу.',
+              '<strong>Упростила интерфейс.</strong> Использовала акценты только там, где они уместны, спрятала подробную информацию в тултипы и разделила всё на отдельные блоки.',
+              '<strong>Сделала мобильную версию интуитивнее.</strong> Добавила возможность скрыть все предложения финансовой организации под одной заявкой, убрала длинную информацию в тултипы, расставила акценты и добавила нижнюю навигацию.',
+              '<strong>Добавила удобную навигацию</strong> по личному кабинету.',
             ],
           },
           {
             h: 'Результат',
-            p: ['Мы перепроектировали архитектуру личного кабинета со строгой логикой и визуальной иерархией:'],
+            p: ['В личном кабинете появились строгая логика и визуальная иерархия:'],
             list: [
-              '<strong>Контекстная группировка:</strong> все предложения привязаны к конкретной заявке клиента, поэтому он видит только варианты по текущему запросу.',
               '<strong>Цветовые статусы:</strong> зелёный («Одобрено») — готовые решения, синий («Лучше всего подходит») — наши рекомендации, серый («Отказано») — обработанные заявки, фиолетовый («Сервисы для вас») — кросс-продукты экосистемы (например, Jetu для реструктуризации долга).',
               '<strong>Прозрачность процесса:</strong> метка «Онлайн» или «Офлайн» в каждой карточке, чтобы человек заранее знал, как получит деньги.',
             ],

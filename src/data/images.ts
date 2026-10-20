@@ -46,7 +46,7 @@ export const caseImages: Record<
     groups: [
       { key: 'research', images: [] },
       { key: 'wireframes', images: p('freedom-academy-1', ['wireframes-lofi.png']) },
-      { key: 'design', images: p('freedom-academy-1', ['after-01.jpg', 'after-02.jpg']) },
+      { key: 'design', images: p('freedom-academy-1', ['after-01.jpg', 'after-02.jpg', 'design-mobile.jpg']) },
     ],
     alt: { ru: 'Исследование Freedom Academy 1.0', en: 'Freedom Academy 1.0 research' },
   },

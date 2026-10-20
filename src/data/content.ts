@@ -248,7 +248,7 @@ const allContent: Record<Lang, Content> = {
             h: 'Context',
             p: [
               'We reworked the Freedom Academy learning platform as part of the evolution of our design system. The goal was not only a new visual language, but also a better experience, navigation and learning journey.',
-              '<strong>My role:</strong> UX/UI designer in a team. All Academy courses are free; only one offline course is paid.',
+              '<strong>My role:</strong> UX/UI designer in a team.',
             ],
           },
           {
@@ -725,7 +725,7 @@ const allContent: Record<Lang, Content> = {
             h: 'Контекст',
             p: [
               'Мы переработали образовательную платформу Freedom Academy в рамках развития дизайн-системы. Цель была не только в новом визуальном языке, но и в лучшем опыте, навигации и пути обучения.',
-              '<strong>Моя роль:</strong> UX/UI дизайнер в команде. Все курсы Академии бесплатные, платный только один офлайн-курс.',
+              '<strong>Моя роль:</strong> UX/UI дизайнер в команде.',
             ],
           },
           {

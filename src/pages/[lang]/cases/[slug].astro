@@ -61,6 +61,11 @@ for (const b of researchBlocks) {
     {img.groups.map((g) => (
       <section class="gallery-group" id={g.key}>
         <h2>{groupTitles[g.key][lang]}</h2>
+        {g.lead && g.lead.length > 0 && (
+          <div class="gallery gallery-lead">
+            {g.lead.map((src) => <img src={src} alt={`${groupTitles[g.key][lang]} — ${img.alt[lang]}`} loading="lazy" />)}
+          </div>
+        )}
         {img.video && img.videoGroup === g.key && (
           <>
             <h3 class="sub-title">{(img.videoTitle ?? videoTitle)[lang]}</h3>

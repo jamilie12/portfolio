@@ -19,7 +19,7 @@ export const videoTitle = { ru: 'Видео', en: 'Video' };
 
 export const caseImages: Record<
   string,
-  { cover: string; video?: string; videoGroup?: GroupKey; videoTitle?: { ru: string; en: string }; embed?: { src: string; title: { ru: string; en: string } }; groups: { key: GroupKey; images: string[] }[]; alt: { ru: string; en: string } }
+  { cover: string; video?: string; videoGroup?: GroupKey; videoTitle?: { ru: string; en: string }; embed?: { src: string; title: { ru: string; en: string } }; groups: { key: GroupKey; images: string[]; lead?: string[] }[]; alt: { ru: string; en: string } }
 > = {
   'website-redesign': {
     cover: `${base}/website-redesign/01.jpg`,
@@ -46,7 +46,7 @@ export const caseImages: Record<
     groups: [
       { key: 'research', images: [] },
       { key: 'wireframes', images: p('freedom-academy-1', ['wireframes-lofi.png']) },
-      { key: 'design', images: p('freedom-academy-1', ['after-01.jpg', 'after-02.jpg', 'design-mobile.jpg']) },
+      { key: 'design', lead: p('freedom-academy-1', ['design-mobile.jpg']), images: p('freedom-academy-1', ['after-01.jpg', 'after-02.jpg']) },
     ],
     alt: { ru: 'Исследование Freedom Academy 1.0', en: 'Freedom Academy 1.0 research' },
   },

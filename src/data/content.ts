@@ -245,34 +245,65 @@ const allContent: Record<Lang, Content> = {
         subtitle: 'Research, information architecture, user flow and prototyping.',
         blocks: [
           {
-            h: 'Background',
+            h: 'Context',
             p: [
-              'The Academy design was originally created in 2019. While the platform was performing reasonably well, we identified an opportunity to redesign it as part of the ongoing evolution of our design system.',
-              'The main goal was not only to bring the Academy in line with the new visual language, but also to improve the overall user experience, navigation, and learning journey.',
+              'We reworked the Freedom Academy learning platform as part of the evolution of our design system. The goal was not only a new visual language, but also a better experience, navigation and learning journey.',
+              '<strong>My role:</strong> UX/UI designer in a team. All Academy courses are free; only one offline course is paid.',
             ],
           },
           {
-            group: 'research',
-            h: 'Benchmarking',
-            p: [
-              'In a benchmarking, I compared our current product with competitors (Skillbox, Tinkoff, Udemy) and highlighted our pros and cons based on the context.',
+            h: 'How we researched',
+            p: ['We used the Jobs To Be Done approach: not “which features do they want”, but “what job is the person trying to get done and what gets in the way”.'],
+            list: [
+              'Benchmarking of competitors and alternatives.',
+              'Interviews with 8 respondents.',
+              'Job stories and job statements of users.',
+              'The user timeline and the four forces of choice (what pushes, what pulls, what scares, what keeps people where they are).',
+              'Analysis of customer complaints about webinars.',
             ],
           },
           {
-            group: 'research',
-            h: 'Interview',
-            p: [
-              'I interviewed people who have already bought courses and those who have not yet bought. Before the interview, I wrote a script with questions, as well as situations in which I wanted to know how the user would behave.',
+            h: 'What we learned',
+          },
+          {
+            sub: '1. People want to invest, but they are afraid and distrustful',
+            p: ['The main fear is losing money. Investing is seen as a “lottery”, and courses and experts look dubious: ads and the risk of fraud.'],
+            note: '“What puts me off investing is that you can’t calculate the result you want. It’s like a lottery or poker to me.”',
+          },
+          {
+            sub: '2. There is little knowledge and little time',
+            p: ['Terminology is scary, long videos are hard to get through, and there is not enough time to study.'],
+            note: '“My head is spinning from financial terminology. I can’t watch long videos with lots of information.”',
+          },
+          {
+            sub: '3. Learning format matters',
+            p: ['Respondents kept saying the same things: short videos without fluff, level assessment at the start, homework with feedback, a mentor.'],
+            note: '“A one-hour lecture is not interesting to anyone and takes too much time.”',
+          },
+          {
+            note: '“At the start of learning, determining your level is important. I don’t want to watch videos and do tasks about what I already know.”',
+          },
+          {
+            sub: '4. The main alternative is free sources',
+            p: ['YouTube and search. People choose not access to knowledge but structure, verified experts and saving time.'],
+          },
+          {
+            sub: '5. Webinars are a separate pain zone',
+            p: ['No recordings, no chat with the speaker, no reminders, and support does not answer.'],
+          },
+          {
+            h: 'What we built into the product',
+            list: [
+              '<strong>Trust:</strong> a detailed teacher profile, course ratings.',
+              '<strong>Enrollment and viewing:</strong> you can enroll in a course and watch it after registration.',
+              '<strong>Personalized program:</strong> a level test, so people do not go through what they already know.',
+              '<strong>Convenient learning:</strong> short videos, a convenient player, homework with feedback.',
+              '<strong>Progress and motivation:</strong> a progress bar, reminders about study and webinars, webinar recordings.',
             ],
           },
           {
-            group: 'research',
-            h: 'Job stories',
-            p: [
-              'I wrote job stories to understand what motivation users have when they use the product, and what their ultimate goal is.',
-            ],
+            p: ['Next, we built the information architecture, user flow and prototypes of the key screens.'],
           },
-          { group: 'research', h: 'Information architecture, user flow and prototyping' },
         ],
       },
       {
@@ -691,34 +722,65 @@ const allContent: Record<Lang, Content> = {
         subtitle: 'Исследование, информационная архитектура, user flow и прототипирование.',
         blocks: [
           {
-            h: 'Предыстория',
+            h: 'Контекст',
             p: [
-              'Дизайн Академии был создан в 2019 году. Платформа работала неплохо, но мы увидели возможность переработать её в рамках развития дизайн-системы.',
-              'Цель — не только привести Академию к новому визуальному языку, но и улучшить общий опыт, навигацию и путь обучения.',
+              'Мы переработали образовательную платформу Freedom Academy в рамках развития дизайн-системы. Цель была не только в новом визуальном языке, но и в лучшем опыте, навигации и пути обучения.',
+              '<strong>Моя роль:</strong> UX/UI дизайнер в команде. Все курсы Академии бесплатные, платный только один офлайн-курс.',
             ],
           },
           {
-            group: 'research',
-            h: 'Бенчмаркинг',
-            p: [
-              'В бенчмаркинге я сравнила наш продукт с конкурентами (Skillbox, Тинькофф, Udemy) и выделила сильные и слабые стороны с учётом контекста.',
+            h: 'Как мы исследовали',
+            p: ['Мы использовали подход Jobs To Be Done: не «какие функции хотят», а «какую задачу решает человек и что ему мешает».'],
+            list: [
+              'Бенчмаркинг конкурентов и альтернатив.',
+              'Интервью с 8 респондентами.',
+              'Job stories и формулировки задач пользователей.',
+              'Путь пользователя во времени и четыре силы выбора (что выталкивает, что притягивает, что пугает, что удерживает).',
+              'Разбор жалоб клиентов на вебинарах.',
             ],
           },
           {
-            group: 'research',
-            h: 'Интервью',
-            p: [
-              'Я провела интервью с теми, кто уже купил курсы, и с теми, кто ещё нет. Перед интервью подготовила сценарий вопросов и ситуаций, в которых хотела понять поведение пользователя.',
+            h: 'Что мы узнали',
+          },
+          {
+            sub: '1. Люди хотят инвестировать, но боятся и не доверяют',
+            p: ['Главный страх — потерять деньги. Инвестиции воспринимают как «лотерею», а в курсах и экспертах видят много сомнительного: реклама, риск мошенничества.'],
+            note: '«Отталкивает от инвестиций то, что невозможно просчитать желаемый результат. Это как лотерея для меня или покер.»',
+          },
+          {
+            sub: '2. Знаний и времени мало',
+            p: ['Терминология пугает, длинные видео не осиливают, на учёбу не хватает времени.'],
+            note: '«Голова кругом от финансовой терминологии. Долгие видео с кучей информации не могу смотреть.»',
+          },
+          {
+            sub: '3. Важен формат обучения',
+            p: ['Респонденты повторяли одно и то же: короткие ролики без воды, определение уровня на старте, домашние задания с обратной связью, куратор.'],
+            note: '«Лекция в 1 час никому не интересна и занимает слишком много времени.»',
+          },
+          {
+            note: '«На старте обучения важно определение уровня знаний. Я не хочу смотреть видео и делать задания о том, что уже знаю.»',
+          },
+          {
+            sub: '4. Главная альтернатива — бесплатные источники',
+            p: ['YouTube и поиск. Люди выбирают не доступ к знаниям, а структуру, проверенных экспертов и экономию времени.'],
+          },
+          {
+            sub: '5. Вебинары — отдельная зона боли',
+            p: ['Нет записей, чата со спикером и напоминаний, поддержка не отвечает.'],
+          },
+          {
+            h: 'Что мы заложили в продукт',
+            list: [
+              '<strong>Доверие:</strong> подробный профиль преподавателя, рейтинг курсов.',
+              '<strong>Запись и просмотр:</strong> записаться на курс и смотреть его можно после регистрации.',
+              '<strong>Индивидуальная программа:</strong> тест на уровень, чтобы человек не проходил то, что уже знает.',
+              '<strong>Удобное обучение:</strong> короткие видео, удобный плеер, домашние задания с обратной связью.',
+              '<strong>Прогресс и мотивация:</strong> шкала прогресса, напоминания об учёбе и вебинарах, записи вебинаров.',
             ],
           },
           {
-            group: 'research',
-            h: 'Job stories',
-            p: [
-              'Я составила job stories, чтобы понять мотивацию пользователей и их конечную цель при работе с продуктом.',
-            ],
+            p: ['Дальше мы выстроили информационную архитектуру, user flow и прототипы ключевых экранов.'],
           },
-          { group: 'research', h: 'Информационная архитектура, user flow и прототипирование' },
         ],
       },
       {

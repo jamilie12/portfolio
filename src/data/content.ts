@@ -5,8 +5,8 @@ export type Lang = 'ru' | 'en';
 export const langs: Lang[] = ['ru', 'en'];
 
 // group: 'research' — блок показывается внутри секции исследований кейса (под её заголовком), а не в основном тексте
-// embed: true — на месте блока показывается окно Figma кейса; image — на месте блока показывается картинка на всю ширину. sub — подзаголовок внутри блока (h4), ol — нумерованный список. В p/list/ol допустим простой HTML (ссылки, <strong>).
-type Block = { h?: string; sub?: string; p?: string[]; list?: string[]; ol?: string[]; note?: string; group?: 'research'; embed?: boolean; image?: string };
+// embed: true — на месте блока показывается окно Figma кейса; image — на месте блока показывается картинка на всю ширину; images — галерея картинок (в секции исследований). sub — подзаголовок внутри блока (h4), ol — нумерованный список. В p/list/ol допустим простой HTML (ссылки, <strong>).
+export type Block = { h?: string; sub?: string; p?: string[]; list?: string[]; ol?: string[]; note?: string; group?: 'research'; embed?: boolean; image?: string; images?: string[] };
 export type Case = {
   slug: string;
   tag: string;
@@ -252,6 +252,7 @@ const allContent: Record<Lang, Content> = {
             ],
           },
           {
+            group: 'research',
             h: 'How we researched',
             p: ['We used the Jobs To Be Done approach: not “which features do they want”, but “what job is the person trying to get done and what gets in the way”.'],
             list: [
@@ -263,35 +264,47 @@ const allContent: Record<Lang, Content> = {
             ],
           },
           {
+            group: 'research',
             h: 'What we learned',
           },
           {
+            group: 'research',
             sub: '1. People want to invest, but they are afraid and distrustful',
             p: ['The main fear is losing money. Investing is seen as a “lottery”, and courses and experts look dubious: ads and the risk of fraud.'],
             note: '“What puts me off investing is that you can’t calculate the result you want. It’s like a lottery or poker to me.”',
           },
           {
+            group: 'research',
             sub: '2. There is little knowledge and little time',
             p: ['Terminology is scary, long videos are hard to get through, and there is not enough time to study.'],
             note: '“My head is spinning from financial terminology. I can’t watch long videos with lots of information.”',
           },
           {
+            group: 'research',
             sub: '3. Learning format matters',
             p: ['Respondents kept saying the same things: short videos without fluff, level assessment at the start, homework with feedback, a mentor.'],
             note: '“A one-hour lecture is not interesting to anyone and takes too much time.”',
           },
           {
+            group: 'research',
             note: '“At the start of learning, determining your level is important. I don’t want to watch videos and do tasks about what I already know.”',
           },
           {
+            group: 'research',
             sub: '4. The main alternative is free sources',
             p: ['YouTube and search. People choose not access to knowledge but structure, verified experts and saving time.'],
           },
           {
+            group: 'research',
             sub: '5. Webinars are a separate pain zone',
             p: ['No recordings, no chat with the speaker, no reminders, and support does not answer.'],
           },
           {
+            group: 'research',
+            images: ['/images/cases/freedom-academy-1/01.png', '/images/cases/freedom-academy-1/02.png'],
+          },
+          {
+            group: 'research',
             h: 'What we built into the product',
             list: [
               '<strong>Trust:</strong> real student reviews, course ratings.',
@@ -301,7 +314,12 @@ const allContent: Record<Lang, Content> = {
             ],
           },
           {
+            group: 'research',
             p: ['Next, we built the information architecture, user flow and prototypes of the key screens.'],
+          },
+          {
+            group: 'research',
+            images: ['/images/cases/freedom-academy-1/03.png'],
           },
         ],
       },
@@ -728,6 +746,7 @@ const allContent: Record<Lang, Content> = {
             ],
           },
           {
+            group: 'research',
             h: 'Как мы исследовали',
             p: ['Мы использовали подход Jobs To Be Done: не «какие функции хотят», а «какую задачу решает человек и что ему мешает».'],
             list: [
@@ -739,35 +758,47 @@ const allContent: Record<Lang, Content> = {
             ],
           },
           {
+            group: 'research',
             h: 'Что мы узнали',
           },
           {
+            group: 'research',
             sub: '1. Люди хотят инвестировать, но боятся и не доверяют',
             p: ['Главный страх — потерять деньги. Инвестиции воспринимают как «лотерею», а в курсах и экспертах видят много сомнительного: реклама, риск мошенничества.'],
             note: '«Отталкивает от инвестиций то, что невозможно просчитать желаемый результат. Это как лотерея для меня или покер.»',
           },
           {
+            group: 'research',
             sub: '2. Знаний и времени мало',
             p: ['Терминология пугает, длинные видео не осиливают, на учёбу не хватает времени.'],
             note: '«Голова кругом от финансовой терминологии. Долгие видео с кучей информации не могу смотреть.»',
           },
           {
+            group: 'research',
             sub: '3. Важен формат обучения',
             p: ['Респонденты повторяли одно и то же: короткие ролики без воды, определение уровня на старте, домашние задания с обратной связью, куратор.'],
             note: '«Лекция в 1 час никому не интересна и занимает слишком много времени.»',
           },
           {
+            group: 'research',
             note: '«На старте обучения важно определение уровня знаний. Я не хочу смотреть видео и делать задания о том, что уже знаю.»',
           },
           {
+            group: 'research',
             sub: '4. Главная альтернатива — бесплатные источники',
             p: ['YouTube и поиск. Люди выбирают не доступ к знаниям, а структуру, проверенных экспертов и экономию времени.'],
           },
           {
+            group: 'research',
             sub: '5. Вебинары — отдельная зона боли',
             p: ['Нет записей, чата со спикером и напоминаний, поддержка не отвечает.'],
           },
           {
+            group: 'research',
+            images: ['/images/cases/freedom-academy-1/01.png', '/images/cases/freedom-academy-1/02.png'],
+          },
+          {
+            group: 'research',
             h: 'Что мы заложили в продукт',
             list: [
               '<strong>Доверие:</strong> реальные отзывы студентов, рейтинг курсов.',
@@ -777,7 +808,12 @@ const allContent: Record<Lang, Content> = {
             ],
           },
           {
+            group: 'research',
             p: ['Дальше мы выстроили информационную архитектуру, user flow и прототипы ключевых экранов.'],
+          },
+          {
+            group: 'research',
+            images: ['/images/cases/freedom-academy-1/03.png'],
           },
         ],
       },

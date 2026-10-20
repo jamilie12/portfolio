@@ -1,6 +1,7 @@
 ---
 import Base from '../../../layouts/Base.astro';
-import { content, langs, type Lang } from '../../../data/content';
+import Blocks from '../../../components/Blocks.astro';
+import { content, langs, type Lang, type Block } from '../../../data/content';
 import { caseImages, groupTitles, videoTitle } from '../../../data/images';
 export function getStaticPaths() {
   return langs.flatMap((lang) => content[lang].cases.map((c) => ({ params: { lang, slug: c.slug } })));
@@ -18,6 +19,16 @@ const marker = embedIdx >= 0 ? mainBlocks[embedIdx] : null;
 const beforeEmbed = embedIdx >= 0 ? mainBlocks.slice(0, embedIdx) : mainBlocks;
 const afterEmbed = embedIdx >= 0 ? mainBlocks.slice(embedIdx + 1) : [];
 const researchBlocks = c.blocks.filter((b) => b.group === 'research');
+type Seg = { kind: 'text'; blocks: Block[] } | { kind: 'images'; images: string[] };
+const researchSegments: Seg[] = [];
+for (const b of researchBlocks) {
+  if (b.images) researchSegments.push({ kind: 'images', images: b.images });
+  else {
+    const last = researchSegments[researchSegments.length - 1];
+    if (last && last.kind === 'text') last.blocks.push(b);
+    else researchSegments.push({ kind: 'text', blocks: [b] });
+  }
+}
 ---
 <Base lang={lang} title={`${c.title} — ${t.hero.name}`} description={c.subtitle} switchPath={`/cases/${slug}/`}>
   <div class="wrap">
@@ -28,18 +39,7 @@ const researchBlocks = c.blocks.filter((b) => b.group === 'research');
       <p class="sub">{c.subtitle}</p>
       <img class="case-cover" src={img.cover} alt={img.alt[lang]} />
     </header>
-    <article class="case-body">
-      {beforeEmbed.map((b) => (
-        <>
-          {b.h && <h2>{b.h}</h2>}
-          {b.sub && <h4>{b.sub}</h4>}
-          {b.p && b.p.map((x) => <p set:html={x} />)}
-          {b.list && <ul>{b.list.map((x) => <li set:html={x} />)}</ul>}
-          {b.ol && <ol>{b.ol.map((x) => <li set:html={x} />)}</ol>}
-          {b.note && <p class="callout">{b.note}</p>}
-        </>
-      ))}
-    </article>
+    <Blocks blocks={beforeEmbed} />
     {marker?.image && (
       <figure class="case-figure">
         <img src={marker.image} alt={`${c.title} — benchmark`} loading="lazy" />
@@ -51,21 +51,8 @@ const researchBlocks = c.blocks.filter((b) => b.group === 'research');
         <iframe class="case-embed" src={img.embed.src} title={img.embed.title[lang]} loading="lazy" allowfullscreen></iframe>
       </section>
     )}
-    {afterEmbed.length > 0 && (
-      <article class="case-body">
-        {afterEmbed.map((b) => (
-          <>
-            {b.h && <h2>{b.h}</h2>}
-            {b.sub && <h4>{b.sub}</h4>}
-            {b.p && b.p.map((x) => <p set:html={x} />)}
-            {b.list && <ul>{b.list.map((x) => <li set:html={x} />)}</ul>}
-            {b.ol && <ol>{b.ol.map((x) => <li set:html={x} />)}</ol>}
-            {b.note && <p class="callout">{b.note}</p>}
-          </>
-        ))}
-      </article>
-    )}
-    {img.video && (
+    {afterEmbed.length > 0 && <Blocks blocks={afterEmbed} />}
+    {img.video && !img.videoGroup && (
       <section class="gallery-group" id="video">
         <h2>{(img.videoTitle ?? videoTitle)[lang]}</h2>
         <video class="case-video" src={img.video} poster={img.cover} controls playsinline preload="metadata"></video>
@@ -74,23 +61,26 @@ const researchBlocks = c.blocks.filter((b) => b.group === 'research');
     {img.groups.map((g) => (
       <section class="gallery-group" id={g.key}>
         <h2>{groupTitles[g.key][lang]}</h2>
-        {g.key === 'research' && researchBlocks.length > 0 && (
-          <article class="case-body research-body">
-            {researchBlocks.map((b) => (
-              <>
-                {b.h && <h3>{b.h}</h3>}
-                {b.sub && <h4>{b.sub}</h4>}
-                {b.p && b.p.map((x) => <p set:html={x} />)}
-                {b.list && <ul>{b.list.map((x) => <li set:html={x} />)}</ul>}
-                {b.ol && <ol>{b.ol.map((x) => <li set:html={x} />)}</ol>}
-                {b.note && <p class="callout">{b.note}</p>}
-              </>
-            ))}
-          </article>
+        {img.video && img.videoGroup === g.key && (
+          <>
+            <h3 class="sub-title">{(img.videoTitle ?? videoTitle)[lang]}</h3>
+            <video class="case-video" src={img.video} poster={img.cover} controls playsinline preload="metadata"></video>
+          </>
         )}
-        <div class="gallery">
-          {g.images.map((src) => <img src={src} alt={`${groupTitles[g.key][lang]} — ${img.alt[lang]}`} loading="lazy" />)}
-        </div>
+        {g.key === 'research' && researchSegments.map((seg) =>
+          seg.kind === 'text' ? (
+            <Blocks blocks={seg.blocks} research />
+          ) : (
+            <div class="gallery gallery-inline">
+              {seg.images.map((src) => <img src={src} alt={`${groupTitles[g.key][lang]} — ${img.alt[lang]}`} loading="lazy" />)}
+            </div>
+          )
+        )}
+        {g.images.length > 0 && (
+          <div class="gallery">
+            {g.images.map((src) => <img src={src} alt={`${groupTitles[g.key][lang]} — ${img.alt[lang]}`} loading="lazy" />)}
+          </div>
+        )}
       </section>
     ))}
     <nav class="case-nav">

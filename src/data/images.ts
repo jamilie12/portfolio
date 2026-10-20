@@ -4,7 +4,7 @@
 const base = '/images/cases';
 const p = (slug: string, files: string[]) => files.map((f) => `${base}/${slug}/${f}`);
 
-export type GroupKey = 'before' | 'after' | 'screens' | 'research' | 'wireframes' | 'userflow';
+export type GroupKey = 'before' | 'after' | 'screens' | 'research' | 'wireframes' | 'userflow' | 'design';
 export const groupTitles: Record<GroupKey, { ru: string; en: string }> = {
   before: { ru: 'До', en: 'Before' },
   after: { ru: 'После', en: 'After' },
@@ -12,13 +12,14 @@ export const groupTitles: Record<GroupKey, { ru: string; en: string }> = {
   research: { ru: 'UX-research', en: 'UX-research' },
   wireframes: { ru: 'Low fidelity wireframe', en: 'Low fidelity wireframe' },
   userflow: { ru: 'User flow', en: 'User flow' },
+  design: { ru: 'Дизайн', en: 'Design' },
 };
 
 export const videoTitle = { ru: 'Видео', en: 'Video' };
 
 export const caseImages: Record<
   string,
-  { cover: string; video?: string; videoTitle?: { ru: string; en: string }; embed?: { src: string; title: { ru: string; en: string } }; groups: { key: GroupKey; images: string[] }[]; alt: { ru: string; en: string } }
+  { cover: string; video?: string; videoGroup?: GroupKey; videoTitle?: { ru: string; en: string }; embed?: { src: string; title: { ru: string; en: string } }; groups: { key: GroupKey; images: string[] }[]; alt: { ru: string; en: string } }
 > = {
   'website-redesign': {
     cover: `${base}/website-redesign/01.jpg`,
@@ -41,10 +42,11 @@ export const caseImages: Record<
     cover: `${base}/freedom-academy-1/cover.jpg`,
     video: '/videos/freedom-academy-1.mp4',
     videoTitle: { ru: 'Функционал личного кабинета', en: 'Personal account features' },
+    videoGroup: 'design',
     groups: [
-      { key: 'research', images: p('freedom-academy-1', ['01.png', '02.png', '03.png']) },
+      { key: 'research', images: [] },
       { key: 'wireframes', images: p('freedom-academy-1', ['wireframes-lofi.png']) },
-      { key: 'after', images: p('freedom-academy-1', ['after-01.jpg', 'after-02.jpg']) },
+      { key: 'design', images: p('freedom-academy-1', ['after-01.jpg', 'after-02.jpg']) },
     ],
     alt: { ru: 'Исследование Freedom Academy 1.0', en: 'Freedom Academy 1.0 research' },
   },

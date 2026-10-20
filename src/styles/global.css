@@ -98,6 +98,10 @@ h3.small { font-size: 14px; letter-spacing: .06em; text-transform: uppercase; co
 .gallery img { width: 100%; height: auto; border-radius: var(--radius); border: 1px solid var(--line); background: var(--soft); }
 .case-body { max-width: 760px; }
 .case-body h2 { font-size: clamp(26px, 3.2vw, 36px); margin: 56px 0 16px; }
+.gallery-inline { margin: 8px 0 8px; }
+.gallery-inline + .research-body { margin-top: 32px; }
+.sub-title { font-size: clamp(20px, 2.4vw, 26px); margin: 0 0 16px; }
+.gallery-group .case-video + .gallery { margin-top: 24px; }
 .research-body { margin-bottom: 40px; }
 .research-body h3 { font-size: clamp(20px, 2.4vw, 26px); margin: 32px 0 12px; }
 .case-body h4 { font-size: 18px; letter-spacing: .02em; margin: 28px 0 10px; }

@@ -1,0 +1,18 @@
+---
+import type { Block } from '../data/content';
+interface Props { blocks: Block[]; research?: boolean }
+const { blocks, research = false } = Astro.props;
+const H = research ? 'h3' : 'h2';
+---
+<article class={`case-body${research ? ' research-body' : ''}`}>
+  {blocks.map((b) => (
+    <>
+      {b.h && <H>{b.h}</H>}
+      {b.sub && <h4>{b.sub}</h4>}
+      {b.p && b.p.map((x) => <p set:html={x} />)}
+      {b.list && <ul>{b.list.map((x) => <li set:html={x} />)}</ul>}
+      {b.ol && <ol>{b.ol.map((x) => <li set:html={x} />)}</ol>}
+      {b.note && <p class="callout">{b.note}</p>}
+    </>
+  ))}
+</article>

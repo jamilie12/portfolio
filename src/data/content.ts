@@ -102,145 +102,8 @@ const allContent: Record<Lang, Content> = {
     },
     cases: [
       {
-        slug: 'website-redesign',
-        tag: 'Freedom Broker · Fintech',
-        title: 'Website Redesign',
-        subtitle:
-          'Financial platform that brings together financial products, market insights, news, analytics, and educational content.',
-        blocks: [
-          {
-            h: 'Overview',
-            p: [
-              'I redesigned the homepage and media platform to make the website easier to navigate and encourage users to explore more content.',
-              'The existing experience made it difficult for users to understand the structure of the platform and navigate between different content types. As a result, content consumption was fragmented and users spent very little time on the website.',
-            ],
-          },
-          {
-            h: 'The challenge',
-            p: ['The main issue was not the lack of content, but how it was structured and presented.'],
-            list: [
-              'Navigation was complex and unintuitive.',
-              'Different types of media content were scattered across the website.',
-              'Users had difficulty discovering related content and moving between articles.',
-              'Content consumption was fragmented rather than continuous.',
-              'Average session duration was around 2 seconds.',
-            ],
-            note: 'The goal: create a clearer content structure and navigation system that would help users quickly understand what the platform offers and naturally continue exploring.',
-          },
-          {
-            h: 'Benchmarking',
-            p: [
-              'In the benchmarking, I compared our product with competitors and highlighted strengths and weaknesses based on the context.',
-            ],
-          },
-          {
-            sub: 'Goal',
-            p: [
-              'Create a functional internal media product with well-thought-out navigation, a clear visual style and mobile optimization, taking into account the strengths and mistakes of key competitors. Main competitors: Yandex Dzen, <a href="https://vc.ru" target="_blank" rel="noopener noreferrer">vc.ru</a>. Additional: <a href="https://research.ffin.ru" target="_blank" rel="noopener noreferrer">research.ffin.ru</a>, <a href="https://atom.finance" target="_blank" rel="noopener noreferrer">atom.finance</a>, <a href="https://open-broker.ru/analytics" target="_blank" rel="noopener noreferrer">open-broker.ru/analytics</a>.',
-            ],
-          },
-          {
-            sub: 'Key findings',
-            ol: [
-              '<strong>Overall winner: Yandex Dzen.</strong> More modern, friendlier and better adapted to mobile. <a href="https://vc.ru" target="_blank" rel="noopener noreferrer">vc.ru</a> is stable and clear, but looks outdated.',
-              '<strong>Functionality.</strong> Short articles can be read right in the feed; comments and search work without losing context. Search shows 5 relevant results with a link to all of them, but the “go to results” icon is slightly confusing.',
-              '<strong>Navigation.</strong> Dzen: fixed sidebar, login and search in the header, infinite-scroll content, navigation always at hand. <a href="https://vc.ru" target="_blank" rel="noopener noreferrer">vc.ru</a>: fixed content width, the menu can be collapsed into a burger (less distracting, but one extra click to other pages).',
-              '<strong>Visuals.</strong> Dzen: minimalism, rounded corners, card-based layout, focus on content, one consistent style even for ads, image placeholders in the color palette. Weak spot: highlighted feed elements sometimes blend into the background.',
-              '<strong>Content.</strong> Dzen splits content into videos, short videos, articles, news, photos and collections. <a href="https://vc.ru" target="_blank" rel="noopener noreferrer">vc.ru</a>: articles, news, announcements, events, photos, videos.',
-              '<strong>Mobile version.</strong> Dzen: bottom menu like in an app, bottom sheets, full-screen search, flat design, 32 px icons. <a href="https://vc.ru" target="_blank" rel="noopener noreferrer">vc.ru</a>: dropdowns as on desktop, a burger, unclear icons, buttons at the top of the screen. Users spend more time on their phones, so the interface should be designed for the thumb and the bottom of the screen.',
-            ],
-          },
-          {
-            sub: 'What we took into the product',
-            list: [
-              'A fixed navigation with an infinite feed (as in Dzen), but with the option to hide the menu (as in <a href="https://vc.ru" target="_blank" rel="noopener noreferrer">vc.ru</a>).',
-              'A rounded, card-based, calm style with focus on content.',
-              'A mobile version built like an app: bottom menu, bottom sheets, full-screen search, large icons.',
-              'Short materials shown in the feed in full; filters and sorting kept on one page.',
-            ],
-          },
-          { image: '/images/cases/website-redesign/benchmark.webp' },
-          {
-            h: 'My approach',
-            p: [
-              'I focused on restructuring the media experience around the user’s need to discover, consume and continue exploring content.',
-              'Instead of separating content into disconnected sections, I created a unified Media hub where users can discover all major content formats in one place: News · Investment reviews · Analytics · Video podcasts · Podcasts · Magazine · Blog.',
-            ],
-          },
-          {
-            h: 'Key solutions',
-            list: [
-              'Unified Media platform — different content formats brought together into one media hub.',
-              'Improved content navigation — users move from one piece of content to the next without returning to the main media page.',
-              'Infinite content feed — a continuous consumption experience with fewer interruptions.',
-              'Homepage redesign — a clearer hierarchy and more intuitive discovery of key products and content.',
-            ],
-          },
-          {
-            h: 'The result',
-            p: [
-              'The redesign transformed the website from a collection of separate content sections into a more connected content ecosystem. Users can quickly see what content is available, discover formats from one place, move between related articles and keep exploring without unnecessary navigation.',
-            ],
-          },
-        ],
-      },
-      {
-        slug: 'freedom-academy-2',
-        tag: 'Freedom Academy · EdTech',
-        title: 'Freedom Academy 2.0',
-        subtitle: 'An end-to-end redesign of an educational platform, from UX analysis to final handoff and implementation.',
-        blocks: [
-          {
-            h: 'Overview',
-            p: [
-              'I worked on Freedom Academy end-to-end — from analyzing the existing platform and defining the user experience to designing new pages and handing the final designs over for development.',
-              'The goal was to transform a rigid, outdated, and difficult-to-navigate learning platform into a modern and seamless educational experience with clear navigation and transparent progress tracking.',
-            ],
-          },
-          {
-            h: 'The challenge',
-            p: [
-              'Freedom Academy was built on a pre-existing, off-the-shelf platform with significant limitations. The interface felt outdated and rigid, while the user journey between different stages of learning was not seamless. Some pages required for a complete learning experience were not available in the existing solution.',
-              'The challenge was to improve the experience without rebuilding the platform from scratch — balancing user needs with technical limitations and working closely with external contractors.',
-            ],
-          },
-          {
-            h: 'My role',
-            list: [
-              'UX analysis of the existing platform',
-              'Information architecture and user flows',
-              'Collaboration with external contractors',
-              'Clarifying design and interaction requirements',
-              'Final handoff to development',
-            ],
-            note: 'Learning journey: Registration → Course selection → Course → Tests → Certificate',
-          },
-          {
-            h: 'Key solutions',
-            list: [
-              'Seamless learning experience — natural movement between courses, lessons and tests.',
-              'Progress tracking — completion, current and assigned courses, completed courses and test results.',
-              'Personal account — student plan, overall progress, AI Review, assigned, current and completed courses, test results.',
-              'New platform pages — Login / Registration, course selection, course experience, tests, certificates, progress tracking, personal account.',
-            ],
-          },
-          {
-            h: 'Working within constraints',
-            p: [
-              'One of the most challenging parts was designing within an existing platform rather than from scratch. I worked directly with external contractors to define new pages and interactions that were not part of the original solution, gradually turning the limitations of a boxed product into a more cohesive experience.',
-            ],
-          },
-          {
-            h: 'Outcome',
-            p: [
-              'A transition from a rigid, outdated learning platform to a modern, connected educational experience: clear navigation, seamless transitions, course discovery, progress tracking, a personal learning dashboard, test results and certificates.',
-            ],
-          },
-        ],
-      },
-      {
         slug: 'freedom-academy-1',
-        tag: 'Freedom Academy · Research',
+        tag: 'Freedom Academy · EdTech',
         title: 'Freedom Academy 1.0',
         subtitle: 'Research, information architecture, user flow and prototyping.',
         blocks: [
@@ -324,37 +187,138 @@ const allContent: Record<Lang, Content> = {
         ],
       },
       {
-        slug: 'medtech-app',
-        tag: 'MedTech · Mobile app',
-        title: 'MedTech mobile app',
-        subtitle: 'A companion app for a wearable pain therapy and neuromodulation device.',
+        slug: 'freedom-academy-2',
+        tag: 'Freedom Academy · EdTech',
+        title: 'Freedom Academy 2.0',
+        subtitle: 'An end-to-end redesign of an educational platform, from UX analysis to final handoff and implementation.',
         blocks: [
           {
-            h: 'About',
+            h: 'Overview',
             p: [
-              'An all-in-one companion app for a wearable pain therapy and neuromodulation device. The application pairs hardware with personalized physical therapy, combining electrostimulation, mobility exercises, 3D body targeting, and activity tracking. I was responsible for product strategy, onboarding flows, 3D interaction architecture, UI design, prototyping, and component library creation.',
+              'I worked on Freedom Academy end-to-end — from analyzing the existing platform and defining the user experience to designing new pages and handing the final designs over for development.',
+              'The goal was to transform a rigid, outdated, and difficult-to-navigate learning platform into a modern and seamless educational experience with clear navigation and transparent progress tracking.',
             ],
           },
           {
-            h: 'Problem',
+            h: 'The challenge',
             p: [
-              'Users managing body pain at home face several hurdles: hardware devices can feel complex to operate, generic exercises fail to target specific pain points, and users struggle to stay consistent without clear progress visibility or medical guidance.',
+              'Freedom Academy was built on a pre-existing, off-the-shelf platform with significant limitations. The interface felt outdated and rigid, while the user journey between different stages of learning was not seamless. Some pages required for a complete learning experience were not available in the existing solution.',
+              'The challenge was to improve the experience without rebuilding the platform from scratch — balancing user needs with technical limitations and working closely with external contractors.',
             ],
           },
           {
-            h: 'The approach',
+            h: 'My role',
+            list: [
+              'UX analysis of the existing platform',
+              'Information architecture and user flows',
+              'Collaboration with external contractors',
+              'Clarifying design and interaction requirements',
+              'Final handoff to development',
+            ],
+            note: 'Learning journey: Registration → Course selection → Course → Tests → Certificate',
+          },
+          {
+            h: 'Key solutions',
+            list: [
+              'Seamless learning experience — natural movement between courses, lessons and tests.',
+              'Progress tracking — completion, current and assigned courses, completed courses and test results.',
+              'Personal account — student plan, overall progress, AI Review, assigned, current and completed courses, test results.',
+              'New platform pages — Login / Registration, course selection, course experience, tests, certificates, progress tracking, personal account.',
+            ],
+          },
+          {
+            h: 'Working within constraints',
             p: [
-              'I studied the competitor analyses in health-tech and the physical therapy patient interviews already gathered by the product manager to understand the key pain points. The goal was to build a cohesive platform connecting the physical device to a tailored digital recovery plan. Together we designed a step-by-step onboarding experience, smooth Bluetooth pairing, and an intuitive 3D body mapping interaction that lowers the friction of pinpointing exact pain locations.',
+              'One of the most challenging parts was designing within an existing platform rather than from scratch. I worked directly with external contractors to define new pages and interactions that were not part of the original solution, gradually turning the limitations of a boxed product into a more cohesive experience.',
+            ],
+          },
+          {
+            h: 'Outcome',
+            p: [
+              'A transition from a rigid, outdated learning platform to a modern, connected educational experience: clear navigation, seamless transitions, course discovery, progress tracking, a personal learning dashboard, test results and certificates.',
+            ],
+          },
+        ],
+      },
+      {
+        slug: 'website-redesign',
+        tag: 'Freedom Broker · Fintech',
+        title: 'Mediahub: news, analytics, magazine, blog, video and audio podcasts',
+        subtitle:
+          'Financial platform that brings together financial products, market insights, news, analytics, and educational content.',
+        blocks: [
+          {
+            h: 'Overview',
+            p: [
+              'I redesigned the homepage and media platform to make the website easier to navigate and encourage users to explore more content.',
+              'The existing experience made it difficult for users to understand the structure of the platform and navigate between different content types. As a result, content consumption was fragmented and users spent very little time on the website.',
+            ],
+          },
+          {
+            h: 'The challenge',
+            p: ['The main issue was not the lack of content, but how it was structured and presented.'],
+            list: [
+              'Navigation was complex and unintuitive.',
+              'Different types of media content were scattered across the website.',
+              'Users had difficulty discovering related content and moving between articles.',
+              'Content consumption was fragmented rather than continuous.',
+              'Average session duration was around 2 seconds.',
+            ],
+            note: 'The goal: create a clearer content structure and navigation system that would help users quickly understand what the platform offers and naturally continue exploring.',
+          },
+          {
+            h: 'Benchmarking',
+            p: [
+              'In the benchmarking, I compared our product with competitors and highlighted strengths and weaknesses based on the context.',
+            ],
+          },
+          {
+            sub: 'Goal',
+            p: [
+              'Create a functional internal media product with well-thought-out navigation, a clear visual style and mobile optimization, taking into account the strengths and mistakes of key competitors. Main competitors: Yandex Dzen, <a href="https://vc.ru" target="_blank" rel="noopener noreferrer">vc.ru</a>. Additional: <a href="https://research.ffin.ru" target="_blank" rel="noopener noreferrer">research.ffin.ru</a>, <a href="https://atom.finance" target="_blank" rel="noopener noreferrer">atom.finance</a>, <a href="https://open-broker.ru/analytics" target="_blank" rel="noopener noreferrer">open-broker.ru/analytics</a>.',
+            ],
+          },
+          {
+            sub: 'Key findings',
+            ol: [
+              '<strong>Overall winner: Yandex Dzen.</strong> More modern, friendlier and better adapted to mobile. <a href="https://vc.ru" target="_blank" rel="noopener noreferrer">vc.ru</a> is stable and clear, but looks outdated.',
+              '<strong>Functionality.</strong> Short articles can be read right in the feed; comments and search work without losing context. Search shows 5 relevant results with a link to all of them, but the “go to results” icon is slightly confusing.',
+              '<strong>Navigation.</strong> Dzen: fixed sidebar, login and search in the header, infinite-scroll content, navigation always at hand. <a href="https://vc.ru" target="_blank" rel="noopener noreferrer">vc.ru</a>: fixed content width, the menu can be collapsed into a burger (less distracting, but one extra click to other pages).',
+              '<strong>Visuals.</strong> Dzen: minimalism, rounded corners, card-based layout, focus on content, one consistent style even for ads, image placeholders in the color palette. Weak spot: highlighted feed elements sometimes blend into the background.',
+              '<strong>Content.</strong> Dzen splits content into videos, short videos, articles, news, photos and collections. <a href="https://vc.ru" target="_blank" rel="noopener noreferrer">vc.ru</a>: articles, news, announcements, events, photos, videos.',
+              '<strong>Mobile version.</strong> Dzen: bottom menu like in an app, bottom sheets, full-screen search, flat design, 32 px icons. <a href="https://vc.ru" target="_blank" rel="noopener noreferrer">vc.ru</a>: dropdowns as on desktop, a burger, unclear icons, buttons at the top of the screen. Users spend more time on their phones, so the interface should be designed for the thumb and the bottom of the screen.',
+            ],
+          },
+          {
+            sub: 'What we took into the product',
+            list: [
+              'A fixed navigation with an infinite feed (as in Dzen), but with the option to hide the menu (as in <a href="https://vc.ru" target="_blank" rel="noopener noreferrer">vc.ru</a>).',
+              'A rounded, card-based, calm style with focus on content.',
+              'A mobile version built like an app: bottom menu, bottom sheets, full-screen search, large icons.',
+              'Short materials shown in the feed in full; filters and sorting kept on one page.',
+            ],
+          },
+          { image: '/images/cases/website-redesign/benchmark.webp' },
+          {
+            h: 'My approach',
+            p: [
+              'I focused on restructuring the media experience around the user’s need to discover, consume and continue exploring content.',
+              'Instead of separating content into disconnected sections, I created a unified Media hub where users can discover all major content formats in one place: News · Investment reviews · Analytics · Video podcasts · Podcasts · Magazine · Blog.',
+            ],
+          },
+          {
+            h: 'Key solutions',
+            list: [
+              'Unified Media platform — different content formats brought together into one media hub.',
+              'Improved content navigation — users move from one piece of content to the next without returning to the main media page.',
+              'Infinite content feed — a continuous consumption experience with fewer interruptions.',
+              'Homepage redesign — a clearer hierarchy and more intuitive discovery of key products and content.',
             ],
           },
           {
             h: 'The result',
-            list: [
-              'Guided onboarding & setup — Bluetooth hardware pairing, Apple Health / Google Health Connect sync, goal selection, custom pain therapy plan (or ready-to-use expert programs).',
-              'Smart therapy & hardware control — adjusted exercise routines with real-time intensity control for the electrostimulation pads inside the app.',
-              '3D body mapping — an interactive 3D human model to pinpoint precise pain locations.',
-              'Personalized schedule & analytics — a dashboard with daily/weekly/monthly metrics: steps, distance, calories, completed sessions, pain management progress.',
-              'Content & profile ecosystem — blog, news feed, device setup instructions and a centralized profile.',
+            p: [
+              'The redesign transformed the website from a collection of separate content sections into a more connected content ecosystem. Users can quickly see what content is available, discover formats from one place, move between related articles and keep exploring without unnecessary navigation.',
             ],
           },
         ],
@@ -419,6 +383,42 @@ const allContent: Record<Lang, Content> = {
             list: [
               '<strong>Color-coded statuses:</strong> green (“Approved”) for ready-made solutions, blue (“Most suitable”) for our recommendations, gray (“Denied”) for processed requests, purple (“Services for you”) for cross-products within the ecosystem (e.g., Jetu for debt restructuring).',
               '<strong>Process transparency:</strong> an Online or Offline marker in each card, so the user knows in advance how they will receive the money.',
+            ],
+          },
+        ],
+      },
+      {
+        slug: 'medtech-app',
+        tag: 'MedTech · Mobile app',
+        title: 'MedTech mobile app',
+        subtitle: 'A companion app for a wearable pain therapy and neuromodulation device.',
+        blocks: [
+          {
+            h: 'About',
+            p: [
+              'An all-in-one companion app for a wearable pain therapy and neuromodulation device. The application pairs hardware with personalized physical therapy, combining electrostimulation, mobility exercises, 3D body targeting, and activity tracking. I was responsible for product strategy, onboarding flows, 3D interaction architecture, UI design, prototyping, and component library creation.',
+            ],
+          },
+          {
+            h: 'Problem',
+            p: [
+              'Users managing body pain at home face several hurdles: hardware devices can feel complex to operate, generic exercises fail to target specific pain points, and users struggle to stay consistent without clear progress visibility or medical guidance.',
+            ],
+          },
+          {
+            h: 'The approach',
+            p: [
+              'I studied the competitor analyses in health-tech and the physical therapy patient interviews already gathered by the product manager to understand the key pain points. The goal was to build a cohesive platform connecting the physical device to a tailored digital recovery plan. Together we designed a step-by-step onboarding experience, smooth Bluetooth pairing, and an intuitive 3D body mapping interaction that lowers the friction of pinpointing exact pain locations.',
+            ],
+          },
+          {
+            h: 'The result',
+            list: [
+              'Guided onboarding & setup — Bluetooth hardware pairing, Apple Health / Google Health Connect sync, goal selection, custom pain therapy plan (or ready-to-use expert programs).',
+              'Smart therapy & hardware control — adjusted exercise routines with real-time intensity control for the electrostimulation pads inside the app.',
+              '3D body mapping — an interactive 3D human model to pinpoint precise pain locations.',
+              'Personalized schedule & analytics — a dashboard with daily/weekly/monthly metrics: steps, distance, calories, completed sessions, pain management progress.',
+              'Content & profile ecosystem — blog, news feed, device setup instructions and a centralized profile.',
             ],
           },
         ],
@@ -596,145 +596,8 @@ const allContent: Record<Lang, Content> = {
     },
     cases: [
       {
-        slug: 'website-redesign',
-        tag: 'Freedom Broker · Финтех',
-        title: 'Редизайн сайта',
-        subtitle:
-          'Финансовая платформа, объединяющая финансовые продукты, аналитику рынка, новости и образовательный контент.',
-        blocks: [
-          {
-            h: 'Обзор',
-            p: [
-              'Я переработала главную страницу и медиаплатформу, чтобы по сайту было проще ориентироваться и пользователи смотрели больше контента.',
-              'Прежний опыт мешал понять структуру платформы и переходить между типами контента. В итоге контент потреблялся урывками, а время на сайте было минимальным.',
-            ],
-          },
-          {
-            h: 'Задача',
-            p: ['Проблема была не в нехватке контента, а в том, как он структурирован и подан.'],
-            list: [
-              'Навигация сложная и неинтуитивная.',
-              'Разные типы медиаконтента были разбросаны по сайту.',
-              'Пользователям было трудно находить связанные материалы и переходить между статьями.',
-              'Контент потреблялся фрагментарно, а не непрерывно.',
-              'Средняя длительность сессии — около 2 секунд.',
-            ],
-            note: 'Цель: сделать структуру и навигацию контента понятнее, чтобы пользователь быстро понимал, что предлагает платформа, и естественно продолжал изучать её.',
-          },
-          {
-            h: 'Бенчмаркинг',
-            p: [
-              'В бенчмаркинге я сравнила наш продукт с конкурентами и выделила сильные и слабые стороны с учётом контекста.',
-            ],
-          },
-          {
-            sub: 'Цель',
-            p: [
-              'Создать функциональный внутренний медиапродукт с продуманной навигацией, понятным визуалом и оптимизацией под мобильные, учтя сильные стороны и ошибки конкурентов. Основные конкуренты: Яндекс Дзен, <a href="https://vc.ru" target="_blank" rel="noopener noreferrer">vc.ru</a>. Дополнительные: <a href="https://research.ffin.ru" target="_blank" rel="noopener noreferrer">research.ffin.ru</a>, <a href="https://atom.finance" target="_blank" rel="noopener noreferrer">atom.finance</a>, <a href="https://open-broker.ru/analytics" target="_blank" rel="noopener noreferrer">open-broker.ru/analytics</a>.',
-            ],
-          },
-          {
-            sub: 'Главные выводы',
-            ol: [
-              '<strong>Общий победитель: Яндекс Дзен.</strong> Современнее, дружелюбнее и лучше адаптирован под мобильные. <a href="https://vc.ru" target="_blank" rel="noopener noreferrer">vc.ru</a> стабилен и понятен, но выглядит устаревшим.',
-              '<strong>Функциональность.</strong> Короткие статьи читаются прямо в ленте, комментарии и поиск работают без потери контекста. Поиск показывает 5 релевантных результатов с переходом ко всем, но иконка «перейти к результатам» немного сбивает с толку.',
-              '<strong>Навигация.</strong> Дзен: фиксированный сайдбар, в хедере вход и поиск, контент в бесконечном скролле, навигация всегда под рукой. <a href="https://vc.ru" target="_blank" rel="noopener noreferrer">vc.ru</a>: фиксированная ширина контента, меню можно скрыть в бургер (меньше отвлекает, но лишний клик до других страниц).',
-              '<strong>Визуал.</strong> Дзен: минимализм, скругления, карточность, акцент на контенте, единый стиль даже у рекламы, заглушки вместо картинок в цветовой палитре. Слабое место: выделенные элементы ленты иногда сливаются с фоном.',
-              '<strong>Контент.</strong> Дзен делит на видео, короткие видео, статьи, новости, фото, подборки. <a href="https://vc.ru" target="_blank" rel="noopener noreferrer">vc.ru</a>: статьи, новости, объявления, события, фото, видео.',
-              '<strong>Мобильная версия.</strong> Дзен: нижнее меню как в приложении, bottom sheets, поиск на весь экран, плоский дизайн, иконки 32 px. <a href="https://vc.ru" target="_blank" rel="noopener noreferrer">vc.ru</a>: дропдауны как на десктопе, бургер, непонятные иконки, кнопки наверху экрана. Пользователи больше времени проводят с телефона, поэтому интерфейс должен быть под большой палец и нижнюю часть экрана.',
-            ],
-          },
-          {
-            sub: 'Что взяли в продукт',
-            list: [
-              'Фиксированную навигацию с бесконечной лентой (как у Дзена), но с возможностью скрыть меню (как у <a href="https://vc.ru" target="_blank" rel="noopener noreferrer">vc.ru</a>).',
-              'Скруглённый карточный спокойный стиль с акцентом на контенте.',
-              'Мобильную версию делать как приложение: bottom menu, bottom sheets, поиск на весь экран, крупные иконки.',
-              'Короткие материалы показывать в ленте целиком, фильтры и сортировку держать на одной странице.',
-            ],
-          },
-          { image: '/images/cases/website-redesign/benchmark.webp' },
-          {
-            h: 'Подход',
-            p: [
-              'Я перестроила медиаопыт вокруг потребности пользователя находить, читать и продолжать исследовать контент.',
-              'Вместо разрозненных разделов я создала единый Медиахаб, где собраны все основные форматы: новости · инвестобзоры · аналитика · видеоподкасты · подкасты · журнал · блог.',
-            ],
-          },
-          {
-            h: 'Ключевые решения',
-            list: [
-              'Единая медиаплатформа — разные форматы контента собраны в одном хабе.',
-              'Улучшенная навигация по контенту — переход к следующему материалу без возврата на главную страницу медиа.',
-              'Бесконечная лента — непрерывное потребление контента с меньшим числом разрывов.',
-              'Редизайн главной — понятная иерархия и более простое открытие ключевых продуктов и контента.',
-            ],
-          },
-          {
-            h: 'Результат',
-            p: [
-              'Сайт превратился из набора отдельных разделов в связанную контентную экосистему. Пользователь быстро видит, какой контент есть, находит разные форматы в одном месте, переходит между связанными статьями и продолжает изучать платформу без лишней навигации.',
-            ],
-          },
-        ],
-      },
-      {
-        slug: 'freedom-academy-2',
-        tag: 'Freedom Academy · EdTech',
-        title: 'Freedom Academy 2.0',
-        subtitle: 'Сквозной редизайн образовательной платформы: от UX-анализа до финальной передачи в разработку.',
-        blocks: [
-          {
-            h: 'Обзор',
-            p: [
-              'Я вела Freedom Academy от начала до конца: анализ существующей платформы, проектирование пользовательского опыта, дизайн новых страниц и передача макетов в разработку.',
-              'Цель — превратить жёсткую, устаревшую и неудобную платформу в современный и бесшовный образовательный опыт с понятной навигацией и прозрачным прогрессом.',
-            ],
-          },
-          {
-            h: 'Задача',
-            p: [
-              'Freedom Academy построена на готовой коробочной платформе с серьёзными ограничениями. Интерфейс выглядел устаревшим и негибким, переходы между этапами обучения не были бесшовными, а часть страниц, нужных для полного опыта, в решении отсутствовала.',
-              'Нужно было улучшить опыт, не пересобирая платформу с нуля: сбалансировать потребности пользователей и технические ограничения и тесно работать с внешними подрядчиками.',
-            ],
-          },
-          {
-            h: 'Моя роль',
-            list: [
-              'UX-анализ существующей платформы',
-              'Информационная архитектура и пользовательские сценарии',
-              'Работа с внешними подрядчиками',
-              'Уточнение требований к дизайну и взаимодействиям',
-              'Финальная передача в разработку',
-            ],
-            note: 'Путь обучения: Регистрация → Выбор курса → Курс → Тесты → Сертификат',
-          },
-          {
-            h: 'Ключевые решения',
-            list: [
-              'Бесшовный опыт обучения — естественные переходы между курсами, уроками и тестами.',
-              'Отслеживание прогресса — завершённость, текущие и назначенные курсы, пройденные курсы и результаты тестов.',
-              'Личный кабинет — план студента, общий прогресс, AI Review, назначенные, текущие и пройденные курсы, результаты тестов.',
-              'Новые страницы платформы — вход / регистрация, выбор курса, прохождение курса, тесты, сертификаты, прогресс, личный кабинет.',
-            ],
-          },
-          {
-            h: 'Работа в рамках ограничений',
-            p: [
-              'Самое сложное — проектировать внутри существующей платформы, а не с нуля. Я напрямую работала с подрядчиками, определяя новые страницы и взаимодействия, которых не было в исходном решении, и шаг за шагом превращала ограничения коробки в более цельный продукт.',
-            ],
-          },
-          {
-            h: 'Итог',
-            p: [
-              'Переход от жёсткой устаревшей платформы к современному связанному образовательному опыту: понятная навигация, плавные переходы, выбор курсов, прогресс, личный кабинет, результаты тестов и сертификаты.',
-            ],
-          },
-        ],
-      },
-      {
         slug: 'freedom-academy-1',
-        tag: 'Freedom Academy · Исследование',
+        tag: 'Freedom Academy · EdTech',
         title: 'Freedom Academy 1.0',
         subtitle: 'Исследование, информационная архитектура, user flow и прототипирование.',
         blocks: [
@@ -818,37 +681,138 @@ const allContent: Record<Lang, Content> = {
         ],
       },
       {
-        slug: 'medtech-app',
-        tag: 'MedTech · Мобильное приложение',
-        title: 'MedTech: мобильное приложение',
-        subtitle: 'Приложение-компаньон для носимого устройства для терапии боли и нейромодуляции.',
+        slug: 'freedom-academy-2',
+        tag: 'Freedom Academy · EdTech',
+        title: 'Freedom Academy 2.0',
+        subtitle: 'Сквозной редизайн образовательной платформы: от UX-анализа до финальной передачи в разработку.',
         blocks: [
           {
-            h: 'О проекте',
+            h: 'Обзор',
             p: [
-              'Универсальное приложение-компаньон для носимого устройства для терапии боли и нейромодуляции. Оно соединяет устройство с персональной физической терапией: электростимуляция, упражнения на подвижность, 3D-выбор зоны на теле и отслеживание активности. Я отвечала за продуктовую стратегию, онбординг, архитектуру 3D-взаимодействия, UI-дизайн, прототипирование и библиотеку компонентов.',
+              'Я вела Freedom Academy от начала до конца: анализ существующей платформы, проектирование пользовательского опыта, дизайн новых страниц и передача макетов в разработку.',
+              'Цель — превратить жёсткую, устаревшую и неудобную платформу в современный и бесшовный образовательный опыт с понятной навигацией и прозрачным прогрессом.',
             ],
           },
           {
-            h: 'Проблема',
+            h: 'Задача',
             p: [
-              'У людей, которые справляются с болью дома, несколько препятствий: устройство кажется сложным в управлении, типовые упражнения не попадают в конкретные зоны боли, а без понятного прогресса и медицинского сопровождения трудно заниматься регулярно.',
+              'Freedom Academy построена на готовой коробочной платформе с серьёзными ограничениями. Интерфейс выглядел устаревшим и негибким, переходы между этапами обучения не были бесшовными, а часть страниц, нужных для полного опыта, в решении отсутствовала.',
+              'Нужно было улучшить опыт, не пересобирая платформу с нуля: сбалансировать потребности пользователей и технические ограничения и тесно работать с внешними подрядчиками.',
             ],
           },
+          {
+            h: 'Моя роль',
+            list: [
+              'UX-анализ существующей платформы',
+              'Информационная архитектура и пользовательские сценарии',
+              'Работа с внешними подрядчиками',
+              'Уточнение требований к дизайну и взаимодействиям',
+              'Финальная передача в разработку',
+            ],
+            note: 'Путь обучения: Регистрация → Выбор курса → Курс → Тесты → Сертификат',
+          },
+          {
+            h: 'Ключевые решения',
+            list: [
+              'Бесшовный опыт обучения — естественные переходы между курсами, уроками и тестами.',
+              'Отслеживание прогресса — завершённость, текущие и назначенные курсы, пройденные курсы и результаты тестов.',
+              'Личный кабинет — план студента, общий прогресс, AI Review, назначенные, текущие и пройденные курсы, результаты тестов.',
+              'Новые страницы платформы — вход / регистрация, выбор курса, прохождение курса, тесты, сертификаты, прогресс, личный кабинет.',
+            ],
+          },
+          {
+            h: 'Работа в рамках ограничений',
+            p: [
+              'Самое сложное — проектировать внутри существующей платформы, а не с нуля. Я напрямую работала с подрядчиками, определяя новые страницы и взаимодействия, которых не было в исходном решении, и шаг за шагом превращала ограничения коробки в более цельный продукт.',
+            ],
+          },
+          {
+            h: 'Итог',
+            p: [
+              'Переход от жёсткой устаревшей платформы к современному связанному образовательному опыту: понятная навигация, плавные переходы, выбор курсов, прогресс, личный кабинет, результаты тестов и сертификаты.',
+            ],
+          },
+        ],
+      },
+      {
+        slug: 'website-redesign',
+        tag: 'Freedom Broker · Финтех',
+        title: 'Mediahub: news, analytics, magazine, blog, video and audio podcasts',
+        subtitle:
+          'Финансовая платформа, объединяющая финансовые продукты, аналитику рынка, новости и образовательный контент.',
+        blocks: [
+          {
+            h: 'Обзор',
+            p: [
+              'Я переработала главную страницу и медиаплатформу, чтобы по сайту было проще ориентироваться и пользователи смотрели больше контента.',
+              'Прежний опыт мешал понять структуру платформы и переходить между типами контента. В итоге контент потреблялся урывками, а время на сайте было минимальным.',
+            ],
+          },
+          {
+            h: 'Задача',
+            p: ['Проблема была не в нехватке контента, а в том, как он структурирован и подан.'],
+            list: [
+              'Навигация сложная и неинтуитивная.',
+              'Разные типы медиаконтента были разбросаны по сайту.',
+              'Пользователям было трудно находить связанные материалы и переходить между статьями.',
+              'Контент потреблялся фрагментарно, а не непрерывно.',
+              'Средняя длительность сессии — около 2 секунд.',
+            ],
+            note: 'Цель: сделать структуру и навигацию контента понятнее, чтобы пользователь быстро понимал, что предлагает платформа, и естественно продолжал изучать её.',
+          },
+          {
+            h: 'Бенчмаркинг',
+            p: [
+              'В бенчмаркинге я сравнила наш продукт с конкурентами и выделила сильные и слабые стороны с учётом контекста.',
+            ],
+          },
+          {
+            sub: 'Цель',
+            p: [
+              'Создать функциональный внутренний медиапродукт с продуманной навигацией, понятным визуалом и оптимизацией под мобильные, учтя сильные стороны и ошибки конкурентов. Основные конкуренты: Яндекс Дзен, <a href="https://vc.ru" target="_blank" rel="noopener noreferrer">vc.ru</a>. Дополнительные: <a href="https://research.ffin.ru" target="_blank" rel="noopener noreferrer">research.ffin.ru</a>, <a href="https://atom.finance" target="_blank" rel="noopener noreferrer">atom.finance</a>, <a href="https://open-broker.ru/analytics" target="_blank" rel="noopener noreferrer">open-broker.ru/analytics</a>.',
+            ],
+          },
+          {
+            sub: 'Главные выводы',
+            ol: [
+              '<strong>Общий победитель: Яндекс Дзен.</strong> Современнее, дружелюбнее и лучше адаптирован под мобильные. <a href="https://vc.ru" target="_blank" rel="noopener noreferrer">vc.ru</a> стабилен и понятен, но выглядит устаревшим.',
+              '<strong>Функциональность.</strong> Короткие статьи читаются прямо в ленте, комментарии и поиск работают без потери контекста. Поиск показывает 5 релевантных результатов с переходом ко всем, но иконка «перейти к результатам» немного сбивает с толку.',
+              '<strong>Навигация.</strong> Дзен: фиксированный сайдбар, в хедере вход и поиск, контент в бесконечном скролле, навигация всегда под рукой. <a href="https://vc.ru" target="_blank" rel="noopener noreferrer">vc.ru</a>: фиксированная ширина контента, меню можно скрыть в бургер (меньше отвлекает, но лишний клик до других страниц).',
+              '<strong>Визуал.</strong> Дзен: минимализм, скругления, карточность, акцент на контенте, единый стиль даже у рекламы, заглушки вместо картинок в цветовой палитре. Слабое место: выделенные элементы ленты иногда сливаются с фоном.',
+              '<strong>Контент.</strong> Дзен делит на видео, короткие видео, статьи, новости, фото, подборки. <a href="https://vc.ru" target="_blank" rel="noopener noreferrer">vc.ru</a>: статьи, новости, объявления, события, фото, видео.',
+              '<strong>Мобильная версия.</strong> Дзен: нижнее меню как в приложении, bottom sheets, поиск на весь экран, плоский дизайн, иконки 32 px. <a href="https://vc.ru" target="_blank" rel="noopener noreferrer">vc.ru</a>: дропдауны как на десктопе, бургер, непонятные иконки, кнопки наверху экрана. Пользователи больше времени проводят с телефона, поэтому интерфейс должен быть под большой палец и нижнюю часть экрана.',
+            ],
+          },
+          {
+            sub: 'Что взяли в продукт',
+            list: [
+              'Фиксированную навигацию с бесконечной лентой (как у Дзена), но с возможностью скрыть меню (как у <a href="https://vc.ru" target="_blank" rel="noopener noreferrer">vc.ru</a>).',
+              'Скруглённый карточный спокойный стиль с акцентом на контенте.',
+              'Мобильную версию делать как приложение: bottom menu, bottom sheets, поиск на весь экран, крупные иконки.',
+              'Короткие материалы показывать в ленте целиком, фильтры и сортировку держать на одной странице.',
+            ],
+          },
+          { image: '/images/cases/website-redesign/benchmark.webp' },
           {
             h: 'Подход',
             p: [
-              'Изучила уже собранные продакт-менеджером анализы конкурентов в health-tech и интервью с пациентами физиотерапии, чтобы понять ключевые боли. Цель — единая платформа, соединяющая физическое устройство с персональным цифровым планом восстановления. Мы спроектировали пошаговый онбординг, простое Bluetooth-подключение и понятное 3D-взаимодействие, которое снижает трение при выборе точной зоны боли.',
+              'Я перестроила медиаопыт вокруг потребности пользователя находить, читать и продолжать исследовать контент.',
+              'Вместо разрозненных разделов я создала единый Медиахаб, где собраны все основные форматы: новости · инвестобзоры · аналитика · видеоподкасты · подкасты · журнал · блог.',
+            ],
+          },
+          {
+            h: 'Ключевые решения',
+            list: [
+              'Единая медиаплатформа — разные форматы контента собраны в одном хабе.',
+              'Улучшенная навигация по контенту — переход к следующему материалу без возврата на главную страницу медиа.',
+              'Бесконечная лента — непрерывное потребление контента с меньшим числом разрывов.',
+              'Редизайн главной — понятная иерархия и более простое открытие ключевых продуктов и контента.',
             ],
           },
           {
             h: 'Результат',
-            list: [
-              'Онбординг и настройка по шагам — Bluetooth-подключение, синхронизация с Apple Health / Google Health Connect, выбор целей, индивидуальный план терапии (или готовые программы экспертов).',
-              'Умная терапия и управление устройством — адаптированные упражнения и регулировка интенсивности электродов в реальном времени прямо в приложении.',
-              '3D-карта тела — интерактивная 3D-модель для точного выбора зоны боли.',
-              'Персональное расписание и аналитика — дашборд с метриками за день/неделю/месяц: шаги, дистанция, калории, завершённые сессии, прогресс в управлении болью.',
-              'Контент и профиль — блог, лента новостей, инструкция по настройке устройства и единый профиль.',
+            p: [
+              'Сайт превратился из набора отдельных разделов в связанную контентную экосистему. Пользователь быстро видит, какой контент есть, находит разные форматы в одном месте, переходит между связанными статьями и продолжает изучать платформу без лишней навигации.',
             ],
           },
         ],
@@ -913,6 +877,42 @@ const allContent: Record<Lang, Content> = {
             list: [
               '<strong>Цветовые статусы:</strong> зелёный («Одобрено») — готовые решения, синий («Лучше всего подходит») — наши рекомендации, серый («Отказано») — обработанные заявки, фиолетовый («Сервисы для вас») — кросс-продукты экосистемы (например, Jetu для реструктуризации долга).',
               '<strong>Прозрачность процесса:</strong> метка «Онлайн» или «Офлайн» в каждой карточке, чтобы человек заранее знал, как получит деньги.',
+            ],
+          },
+        ],
+      },
+      {
+        slug: 'medtech-app',
+        tag: 'MedTech · Мобильное приложение',
+        title: 'MedTech: мобильное приложение',
+        subtitle: 'Приложение-компаньон для носимого устройства для терапии боли и нейромодуляции.',
+        blocks: [
+          {
+            h: 'О проекте',
+            p: [
+              'Универсальное приложение-компаньон для носимого устройства для терапии боли и нейромодуляции. Оно соединяет устройство с персональной физической терапией: электростимуляция, упражнения на подвижность, 3D-выбор зоны на теле и отслеживание активности. Я отвечала за продуктовую стратегию, онбординг, архитектуру 3D-взаимодействия, UI-дизайн, прототипирование и библиотеку компонентов.',
+            ],
+          },
+          {
+            h: 'Проблема',
+            p: [
+              'У людей, которые справляются с болью дома, несколько препятствий: устройство кажется сложным в управлении, типовые упражнения не попадают в конкретные зоны боли, а без понятного прогресса и медицинского сопровождения трудно заниматься регулярно.',
+            ],
+          },
+          {
+            h: 'Подход',
+            p: [
+              'Изучила уже собранные продакт-менеджером анализы конкурентов в health-tech и интервью с пациентами физиотерапии, чтобы понять ключевые боли. Цель — единая платформа, соединяющая физическое устройство с персональным цифровым планом восстановления. Мы спроектировали пошаговый онбординг, простое Bluetooth-подключение и понятное 3D-взаимодействие, которое снижает трение при выборе точной зоны боли.',
+            ],
+          },
+          {
+            h: 'Результат',
+            list: [
+              'Онбординг и настройка по шагам — Bluetooth-подключение, синхронизация с Apple Health / Google Health Connect, выбор целей, индивидуальный план терапии (или готовые программы экспертов).',
+              'Умная терапия и управление устройством — адаптированные упражнения и регулировка интенсивности электродов в реальном времени прямо в приложении.',
+              '3D-карта тела — интерактивная 3D-модель для точного выбора зоны боли.',
+              'Персональное расписание и аналитика — дашборд с метриками за день/неделю/месяц: шаги, дистанция, калории, завершённые сессии, прогресс в управлении болью.',
+              'Контент и профиль — блог, лента новостей, инструкция по настройке устройства и единый профиль.',
             ],
           },
         ],

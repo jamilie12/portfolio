@@ -295,7 +295,6 @@ const allContent: Record<Lang, Content> = {
             h: 'What we built into the product',
             list: [
               '<strong>Trust:</strong> real student reviews, course ratings.',
-              '<strong>Enrollment and viewing:</strong> you can enroll in a course and watch it after registration.',
               '<strong>Personalized program:</strong> a level test, so people do not go through what they already know.',
               '<strong>Convenient learning:</strong> short videos, a convenient player, homework with feedback.',
               '<strong>Progress and motivation:</strong> a progress bar, reminders about study and webinars, webinar recordings.',
@@ -772,7 +771,6 @@ const allContent: Record<Lang, Content> = {
             h: 'Что мы заложили в продукт',
             list: [
               '<strong>Доверие:</strong> реальные отзывы студентов, рейтинг курсов.',
-              '<strong>Запись и просмотр:</strong> записаться на курс и смотреть его можно после регистрации.',
               '<strong>Индивидуальная программа:</strong> тест на уровень, чтобы человек не проходил то, что уже знает.',
               '<strong>Удобное обучение:</strong> короткие видео, удобный плеер, домашние задания с обратной связью.',
               '<strong>Прогресс и мотивация:</strong> шкала прогресса, напоминания об учёбе и вебинарах, записи вебинаров.',
